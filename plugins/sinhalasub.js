@@ -43,7 +43,7 @@ let numrep = []
              if (movs.result.data.length < 1) return await reply(msr.not_fo)
 
 		
-              let cot = `🔮 *𝖬𝖮𝖵𝖨𝖤-𝖷 𝖬𝖮𝖵𝖨𝖤 𝖲𝖤𝖠𝖱𝖢𝖧 𝖲𝖸𝖲𝖳𝖤𝖬* 🔮
+              let cot = `🔮 *𝗗𝗔𝗥𝗞 𝗦𝗛𝗔𝗗𝗢𝗪 𝖬𝖮𝖵𝖨𝖤 𝖲𝖤𝖠𝖱𝖢𝖧 𝖲𝖸𝖲𝖳𝖤𝖬* 🔮
 
 
 📲 ${oce}Input:${oce} *${q}*
@@ -97,7 +97,7 @@ const move = await fetchApi(`${apilink}/movie/sinhalasub/movie?url=${q}&apikey=$
 let mov = move.result.data
       
     
-let cot = `🎬 *𝖬𝖮𝖵𝖨𝖤-𝖷 𝖬𝖮𝖵𝖨𝖤 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 🎬
+let cot = `🎬 *𝗗𝗔𝗥𝗞 𝗦𝗛𝗔𝗗𝗢𝗪 𝖬𝖮𝖵𝖨𝖤 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 🎬
 
 
    🎞️ ${oce2}ᴛɪᴛʟᴇ :${oce2} ${mov.title}
@@ -176,7 +176,7 @@ const move = await fetchApi(`${apilink}/movie/sinhalasub/movie?url=${inp}&apikey
 let mov = move.result.data
 	
     
-let cot = `🎬 *𝖬𝖮𝖵𝖨𝖤-𝖷 𝖬𝖮𝖵𝖨𝖤 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 🎬
+let cot = `🎬 *𝗗𝗔𝗥𝗞 𝗦𝗛𝗔𝗗𝗢𝗪 𝖬𝖮𝖵𝖨𝖤 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 🎬
 
 
   ${oce2}▫ 🎞️ ᴛɪᴛʟᴇ :${oce2} ${mov.title}
@@ -249,7 +249,7 @@ const move = await fetchApi(`${apilink}/movie/sinhalasub/tvshow?url=${q}&apikey=
 let mov = move.result.data
       
     
-let cot = `📺 *𝖬𝖮𝖵𝖨𝖤-𝖷 𝖳𝖵 𝖲𝖧𝖮𝖶 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 📺
+let cot = `📺 *𝗗𝗔𝗥𝗞 𝗦𝗛𝗔𝗗𝗢𝗪 𝖳𝖵 𝖲𝖧𝖮𝖶 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 📺
 
 
   🎞 ${oce2}ᴛɪᴛʟᴇ :${oce2} ${mov.title}
@@ -329,7 +329,7 @@ const move = await fetchApi(`${apilink}/movie/sinhalasub/episode?url=${inp}&apik
 let mov = move.result.data
     
 
-let cot = `📺 *𝖬𝖮𝖵𝖨𝖤-𝖷 𝖳𝖵 𝖲𝖧𝖮𝖶 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 📺
+let cot = `📺 *𝗗𝗔𝗥𝗞 𝗦𝗛𝗔𝗗𝗢𝗪 𝖳𝖵 𝖲𝖧𝖮𝖶 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 📺
 
 
   📽 ${oce3}Episode Title:${oce3} ${mov.title}
@@ -419,30 +419,26 @@ var cast = ''
 	
   
 let yt = `
-🍟 _*${mov.title}*_
+🍃Ｔɪᴛʟᴇ _*${name}*_
 
-🧿 ${oce}Release Date:${oce} ➜ ${mov.date}
 
-🌍 ${oce}Country:${oce} ➜ ${mov.country}
+🧿 *𝗥𝗲𝗹𝗲𝗮𝘀𝗲 𝗗𝗮𝘁𝗲:* ➜ ${date}
 
-⏱️ ${oce}Duration:${oce} ➜ ${mov.runtime}
+🌍 *𝗖𝗼𝘂𝗻𝘁𝗿𝘆:* ➜ ${country}
 
-🖇️ ${oce}Movie Link:${oce} ➜ ${inp}
+⏱️ *𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:* ➜ ${runtime}
 
-🎀 ${oce}Categories:${oce} ➜ ${mov.category}
+🎀 *𝗖𝗮𝘁𝗲𝗴𝗼𝗿𝗶𝗲𝘀:* ➜ ${cat}
 
-⭐ ${oce}IMDB RATIN:${oce} ➜ ${mov.imdbRate}
+⭐ *𝗜𝗠𝗗𝗕:* ➜ ${imdbrate}
 
-🔮 ${oce}IMDB VOTE:${oce} ➜ ${mov.imdbVoteCount}
+🤵‍♂️ *𝗗𝗶𝗿𝗲𝗰𝘁𝗼𝗿:* ➜ ${director}
 
-🤵‍♂️ ${oce}Director:${oce} ➜ ${mov.director}
-
-🕵️‍♂️ ${oce}Cast:${oce} ➜ ${cast}
+🕵️‍♂️ *𝗖𝗮𝘀𝘁:* ➜ ${cast}
 
 ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
 
-  💃 *ғᴏʟʟᴏᴡ ᴜs ➢* https://whatsapp.com/channel/0029VaaPfFK7Noa8nI8zGg27
-`
+  💍 *𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗠𝗼𝘃𝗶𝗲 ➢* https://wa.me/9474095209`
 const jid = jidx || from
 //await conn.sendMessage(jid,{image:{url: mov.mainDetails.imageUrl},caption: `${yt}\n\n` + config.FOOTER })   
 
@@ -504,30 +500,27 @@ var cast = ''
 	
   
 let yt = `
-🍟 _*${mov.title}*_
+🍃Ｔɪᴛʟᴇ _*${name}*_
 
-🧿 ${oce}Release Date:${oce} ➜ ${mov.date}
 
-🌍 ${oce}Country:${oce} ➜ ${mov.country}
+🧿 *𝗥𝗲𝗹𝗲𝗮𝘀𝗲 𝗗𝗮𝘁𝗲:* ➜ ${date}
 
-⏱️ ${oce}Duration:${oce} ➜ ${mov.runtime}
+🌍 *𝗖𝗼𝘂𝗻𝘁𝗿𝘆:* ➜ ${country}
 
-🖇️ ${oce}Movie Link:${oce} ➜ ${inp}
+⏱️ *𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:* ➜ ${runtime}
 
-🎀 ${oce}Categories:${oce} ➜ ${mov.category}
+🎀 *𝗖𝗮𝘁𝗲𝗴𝗼𝗿𝗶𝗲𝘀:* ➜ ${cat}
 
-⭐ ${oce}IMDB RATIN:${oce} ➜ ${mov.imdbRate}
+⭐ *𝗜𝗠𝗗𝗕:* ➜ ${imdbrate}
 
-🔮 ${oce}IMDB VOTE:${oce} ➜ ${mov.imdbVoteCount}
+🤵‍♂️ *𝗗𝗶𝗿𝗲𝗰𝘁𝗼𝗿:* ➜ ${director}
 
-🤵‍♂️ ${oce}Director:${oce} ➜ ${mov.director}
-
-🕵️‍♂️ ${oce}Cast:${oce} ➜ ${cast}
+🕵️‍♂️ *𝗖𝗮𝘀𝘁:* ➜ ${cast}
 
 ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
 
-  💃 *ғᴏʟʟᴏᴡ ᴜs ➢* https://whatsapp.com/channel/0029VaaPfFK7Noa8nI8zGg27
-`
+  💍 *𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗠𝗼𝘃𝗶𝗲 ➢* https://wa.me/9474095209
+  `
 const jid = jidx || from
 //await conn.sendMessage(jid,{image:{url: mov.mainDetails.imageUrl},caption: `${yt}\n\n` + config.FOOTER })   
 

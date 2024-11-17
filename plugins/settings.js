@@ -31,7 +31,7 @@ let text = m.quoted.msg
 const img = config.LOGO
 const footer = config.FOOTER
     
-let menuMg = `*🗃 ❰ 𝖬𝖮𝖵𝖨𝖤-𝖷 𝖣𝖠𝖳𝖠𝖡𝖠𝖲𝖤 𝖬𝖠𝖭𝖠𝖦𝖬𝖤𝖭𝖳 ❱ 🗃*
+let menuMg = `*🗃 ❰ 𝗗𝗔𝗥𝗞 𝗦𝗛𝗔𝗗𝗢𝗪 𝖣𝖠𝖳𝖠𝖡𝖠𝖲𝖤 𝖬𝖠𝖭𝖠𝖦𝖬𝖤𝖭𝖳 ❱ 🗃*
 
 
 📲 ${oce}Input:${oce}  *${text}*
@@ -100,7 +100,7 @@ if ( !isDev && !isOwner && !isMe ) return await reply(msr.own_cmd)
 const img = config.LOGO
 const footer = config.FOOTER
     
-let menuMg = `🗃 *❰ 𝖬𝖮𝖵𝖨𝖤-𝖷 𝖣𝖠𝖳𝖠𝖡𝖠𝖲𝖤 𝖬𝖠𝖭𝖠𝖦𝖬𝖤𝖭𝖳 ❱* 🗃
+let menuMg = `🗃 *❰ 𝗗𝗔𝗥𝗞 𝗦𝗛𝗔𝗗𝗢𝗪 𝖣𝖠𝖳𝖠𝖡𝖠𝖲𝖤 𝖬𝖠𝖭𝖠𝖦𝖬𝖤𝖭𝖳 ❱* 🗃
 
 
 [1] ANTI_LINK

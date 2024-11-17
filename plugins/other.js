@@ -6,7 +6,7 @@ const { updfb } = require('../lib/database')
 
 
 cmd({
-    pattern: "forward",
+    pattern: "fd",
     react: "⏭️",
     alias: ["f","share","sendfile"],
     desc: "Forward to file jid",

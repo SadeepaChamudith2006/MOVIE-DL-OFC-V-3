@@ -73,7 +73,7 @@ for (let i = 0; i < result.moviedata.castDetails.cast.length; i++) {
   cast += result.moviedata.castDetails.cast[i].actor.name + ','
 }
     
-const output = `📺 *𝖬𝖮𝖵𝖨𝖤-𝖷 𝖳𝖵 𝖲𝖧𝖮𝖶 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 📺
+const output = `📺 *𝗗𝗔𝗥𝗞 𝗦𝗛𝗔𝗗𝗢𝗪 𝖳𝖵 𝖲𝖧𝖮𝖶 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 📺
 
 
 *│ 🎞️ ᴛɪᴛʟᴇ :* ${title}
@@ -162,7 +162,7 @@ for (let i = 0; i < result.moviedata.castDetails.cast.length; i++) {
   cast += result.moviedata.castDetails.cast[i].actor.name + ','
 }
     
-const output = `📺 *𝖬𝖮𝖵𝖨𝖤-𝖷 𝖳𝖵 𝖲𝖧𝖮𝖶 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 📺
+const output = `📺 *𝗗𝗔𝗥𝗞 𝗦𝗛𝗔𝗗𝗢𝗪 𝖳𝖵 𝖲𝖧𝖮𝖶 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 📺
 
 
 *│ 🎞️ ᴛɪᴛʟᴇ :* ${title}

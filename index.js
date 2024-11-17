@@ -254,7 +254,7 @@ await conn.readMessages([mek.key])
                     quoted: mek
                 })
             }
-            const ownerdata = (await axios.get('https://raw.githubusercontent.com/DarkYasiyaofc/FROZEN-HARD/main/DATABASE/DETAILS/movie-x-details.json')).data
+            const ownerdata = (await axios.get('https://raw.githubusercontent.com/SadeepaChamudith2006/UPLOAD/refs/heads/main/JSON/movied.json')).data
             config.BTN = ownerdata.button
             config.BTNURL = ownerdata.buttonurl
       
@@ -424,7 +424,7 @@ await conn.readMessages([mek.key])
                                 sourceUrl: "https://whatsapp.com/channel/0029VaaPfFK7Noa8nI8zGg27" ,
                                 thumbnailUrl: opts && opts.image ? opts.image : config.LOGO ,
                                 title: '🍟 MOVIE-X WHATSAPP USER BOT 🍟',
-                                body: '©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴀʀᴋʏᴀꜱɪʏᴀxᴛᴇᴀᴍ '
+                                body: 'ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴀʀᴋꜱʜᴀᴅᴏᴡxᴛᴇᴀᴍ '
                             }
                         }
                             }

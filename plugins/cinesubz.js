@@ -46,7 +46,7 @@ let numrep = []
 if (movs.result.data.length < 1) return await reply(msr.not_fo)
 
 		
-let cot = `🔮 *𝖬𝖮𝖵𝖨𝖤-𝖷 𝖬𝖮𝖵𝖨𝖤 𝖲𝖤𝖠𝖱𝖢𝖧 𝖲𝖸𝖲𝖳𝖤𝖬* 🔮
+let cot = `🔮 *𝗗𝗔𝗥𝗞 𝗦𝗛𝗔𝗗𝗢𝗪 𝖬𝖮𝖵𝖨𝖤 𝖲𝖤𝖠𝖱𝖢𝖧 𝖲𝖸𝖲𝖳𝖤𝖬* 🔮
 
 
 📲 ${oce}Input:${oce} *${q}*
@@ -115,7 +115,7 @@ var cast = ''
   cast += i.cast_name + ','
 }
     
-let cot = `🎬 *𝖬𝖮𝖵𝖨𝖤-𝖷 𝖬𝖮𝖵𝖨𝖤 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 🎬
+let cot = `🎬 *𝗗𝗔𝗥𝗞 𝗦𝗛𝗔𝗗𝗢𝗪 𝖬𝖮𝖵𝖨𝖤 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 🎬
 
 
    🎞️ ${oce2}ᴛɪᴛʟᴇ :${oce2} ${mov.title}
@@ -196,7 +196,7 @@ if(!inp) return await reply(msr.err)
 const move = await fetchApi(`${apilink}/private/sit1/sc2?url=${inp}&apikey=${apikey}`)
 let mov = move.result.data
 	
-let cot = `🎬 *𝖬𝖮𝖵𝖨𝖤-𝖷 𝖬𝖮𝖵𝖨𝖤 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 🎬
+let cot = `🎬 𝗗𝗔𝗥𝗞 𝗦𝗛𝗔𝗗𝗢𝗪 𝖬𝖮𝖵𝖨𝖤 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 🎬
 
 
   ${oce2}▫ 🎞️ ᴛɪᴛʟᴇ :${oce2} ${mov.title}
@@ -265,7 +265,7 @@ const move = await fetchApi(`${apilink}/private/sit1/sc3?url=${q}&apikey=${apike
 let mov = move.result.data
     
 
-let cot = `📺 *𝖬𝖮𝖵𝖨𝖤-𝖷 𝖳𝖵 𝖲𝖧𝖮𝖶 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 📺
+let cot = `📺 *𝗗𝗔𝗥𝗞 𝗦𝗛𝗔𝗗𝗢𝗪 𝖳𝖵 𝖲𝖧𝖮𝖶 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 📺
 
 
   🎞 ${oce2}ᴛɪᴛʟᴇ :${oce2} ${mov.title}
@@ -346,7 +346,7 @@ if(!q) return await reply(msr.url)
 const move = await fetchApi(`${apilink}/private/sit1/sc4?url=${inp}&apikey=${apikey}`)
 let mov = move.result.data
 	    
-let cot = `📺 *𝖬𝖮𝖵𝖨𝖤-𝖷 𝖳𝖵 𝖲𝖧𝖮𝖶 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 📺
+let cot = `📺 *𝗗𝗔𝗥𝗞 𝗦𝗛𝗔𝗗𝗢𝗪 𝖳𝖵 𝖲𝖧𝖮𝖶 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 📺
 
 
   📽 ${oce3}Episode Name:${oce3} ${mov.episode_name}
@@ -436,26 +436,26 @@ const imdbvote = mov.imdbVoteCount
 const director = mov.director
 	
 let yt = `
-🍟 _*${name}*_
+🍃Ｔɪᴛʟᴇ _*${name}*_
 
 
-🧿 ${oce}Release Date:${oce} ➜ ${date}
+🧿 *𝗥𝗲𝗹𝗲𝗮𝘀𝗲 𝗗𝗮𝘁𝗲:* ➜ ${date}
 
-🌍 ${oce}Country:${oce} ➜ ${country}
+🌍 *𝗖𝗼𝘂𝗻𝘁𝗿𝘆:* ➜ ${country}
 
-⏱️ ${oce}Duration:${oce} ➜ ${runtime}
+⏱️ *𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:* ➜ ${runtime}
 
-🎀 ${oce}Categories:${oce} ➜ ${cat}
+🎀 *𝗖𝗮𝘁𝗲𝗴𝗼𝗿𝗶𝗲𝘀:* ➜ ${cat}
 
-⭐ ${oce}IMDB:${oce} ➜ ${imdbrate}
+⭐ *𝗜𝗠𝗗𝗕:* ➜ ${imdbrate}
 
-🤵‍♂️ ${oce}Director:${oce} ➜ ${director}
+🤵‍♂️ *𝗗𝗶𝗿𝗲𝗰𝘁𝗼𝗿:* ➜ ${director}
 
-🕵️‍♂️ ${oce}Cast:${oce} ➜ ${cast}
+🕵️‍♂️ *𝗖𝗮𝘀𝘁:* ➜ ${cast}
 
 ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
 
-  💃 *ғᴏʟʟᴏᴡ ᴜs ➢* https://whatsapp.com/channel/0029VaaPfFK7Noa8nI8zGg27
+  💍 *𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗠𝗼𝘃𝗶𝗲 ➢* https://wa.me/94740952096
 
 
 `
@@ -528,29 +528,26 @@ const imdbvote = mov.imdbVoteCount
 const director = mov.director
 	
 let yt = `
-🍟 _*${name}*_
+🍃Ｔɪᴛʟᴇ _*${name}*_
 
 
-🧿 ${oce}Release Date:${oce} ➜ ${date}
+🧿 *𝗥𝗲𝗹𝗲𝗮𝘀𝗲 𝗗𝗮𝘁𝗲:* ➜ ${date}
 
-🌍 ${oce}Country:${oce} ➜ ${country}
+🌍 *𝗖𝗼𝘂𝗻𝘁𝗿𝘆:* ➜ ${country}
 
-⏱️ ${oce}Duration:${oce} ➜ ${runtime}
+⏱️ *𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:* ➜ ${runtime}
 
-🎀 ${oce}Categories:${oce} ➜ ${cat}
+🎀 *𝗖𝗮𝘁𝗲𝗴𝗼𝗿𝗶𝗲𝘀:* ➜ ${cat}
 
-⭐ ${oce}IMDB:${oce} ➜ ${imdbrate}
+⭐ *𝗜𝗠𝗗𝗕:* ➜ ${imdbrate}
 
-🤵‍♂️ ${oce}Director:${oce} ➜ ${director}
+🤵‍♂️ *𝗗𝗶𝗿𝗲𝗰𝘁𝗼𝗿:* ➜ ${director}
 
-🕵️‍♂️ ${oce}Cast:${oce} ➜ ${cast}
+🕵️‍♂️ *𝗖𝗮𝘀𝘁:* ➜ ${cast}
 
 ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
 
-  💃 *ғᴏʟʟᴏᴡ ᴜs ➢* https://whatsapp.com/channel/0029VaaPfFK7Noa8nI8zGg27
-
-
-`
+  💍 *𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗠𝗼𝘃𝗶𝗲 ➢* https://wa.me/9474095209`
 
 	
 const jid = jidx || from
@@ -619,7 +616,7 @@ let yt = `
 
 ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
 
-  💃 *ғᴏʟʟᴏᴡ ᴜs ➢* https://whatsapp.com/channel/0029VaaPfFK7Noa8nI8zGg27
+  💍 *𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗠𝗼𝘃𝗶𝗲 ➢* https://wa.me/94740952096
 
 
 `
