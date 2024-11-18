@@ -466,8 +466,8 @@ const jid = jidx || from
 
 const movImg = mov.mainImage.replace("fit=", "fit")
 	
-await conn.sendMessage(jid ,  { image : { url : movImg || mov.images[0] || mov.image || "" } , caption : yt + `${config.CAPTION}` })
-await conn.sendMessage(backup ,  { image : { url : movImg || mov.images[0] || mov.image || "" } , caption : yt + `${config.CAPTION}` })
+await conn.sendMessage(jid ,  { image : { url : movImg || mov.images[0] || mov.image || "" } , caption : yt + `> ᴜᴘʟᴏᴀᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ` })
+await conn.sendMessage(backup ,  { image : { url : movImg || mov.images[0] || mov.image || "" } , caption : yt + `> ᴜᴘʟᴏᴀᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ` })
 
 if (jidx === from) { 
 await conn.sendMessage(from, { react: { text: '✔', key: mek.key } }) 
@@ -553,8 +553,8 @@ let yt = `
 const jid = jidx || from
 //await conn.sendMessage(jid,{image:{url: mov.mainDetails.imageUrl},caption: `${yt}\n\n` + config.FOOTER })   
 
-await conn.sendMessage(jid ,  { image : { url : mov.image } , text : yt + `${config.CAPTION}` })
-await conn.sendMessage(backup ,  { image : { url : movImg || mov.images[0] || mov.image || "" } , caption : yt + `${config.CAPTION}` })
+await conn.sendMessage(jid ,  { image : { url : mov.image } , text : yt + `> ᴜᴘʟᴏᴀᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ` })
+await conn.sendMessage(backup ,  { image : { url : movImg || mov.images[0] || mov.image || "" } , caption : yt + `> ᴜᴘʟᴏᴀᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ` })
 	
 if (jidx === from) { 
 await conn.sendMessage(from, { react: { text: '✔', key: mek.key } }) 
@@ -623,8 +623,8 @@ let yt = `
 const jid = jidx || from
 const movImg = mov.mainImage.replace("fit=", "fit")
 	
-await conn.sendMessage(jid ,  { image : { url : movImg || mov.image || '' } , caption : yt + `${config.CAPTION}`})
-await conn.sendMessage(backup ,  { image : { url : movImg || mov.image || '' } , caption : yt + `${config.CAPTION}`})
+await conn.sendMessage(jid ,  { image : { url : movImg || mov.image || '' } , caption : yt + `> ᴜᴘʟᴏᴀᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ`})
+await conn.sendMessage(backup ,  { image : { url : movImg || mov.image || '' } , caption : yt + `> ᴜᴘʟᴏᴀᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ`})
 
 if (jidx === from) { 
 await conn.sendMessage(from, { react: { text: '✔', key: mek.key } }) 
@@ -687,12 +687,12 @@ const jid = jidx || from
 await conn.sendMessage(jid ,  { image : { url : mov.images[0] || "" } , caption : yt + `
 
 
-${config.CAPTION}`})
+> ᴜᴘʟᴏᴀᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ`})
 
 await conn.sendMessage(backup ,  { image : { url : mov.images[0] || "" } , caption : yt + `
 
 
-${config.CAPTION}`})
+> ᴜᴘʟᴏᴀᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ`})
 
 if (jidx === from) { 
 await conn.sendMessage(from, { react: { text: '✔', key: mek.key } }) 
@@ -756,12 +756,12 @@ const jid = jidx || from
 await conn.sendMessage(jid ,  { image : { url : mov.image } , text : yt + `
 
 
-${config.CAPTION}`})
+> ᴜᴘʟᴏᴀᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ`})
 
 await conn.sendMessage(backup ,  { image : { url : mov.images[0] || "" } , text : yt + `
 
 
-${config.CAPTION}`})
+> ᴜᴘʟᴏᴀᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ`})
 
 if (jidx === from) { 
 await conn.sendMessage(from, { react: { text: '✔', key: mek.key } }) 
@@ -862,12 +862,12 @@ const up_mg = await conn.sendMessage(from, { text : 'Uploading Your Request Vide
 
 const mvdoc = await conn.sendMessage( jid , { 
 		document : { url : res.downloadUrl } , 
-		fileName: `${config.FILE_NAME} ${f_name}.` + ext  , 
+		fileName: `🎬DSXT🎬 ${f_name}.` + ext  , 
 		mimetype: res.mimetype, 
 		caption: f_name + `\n${pk} ${quality} ${pk2}
 
-
-` + config.CAPTION
+> ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ
+`
 	})		
 	
 
@@ -902,12 +902,12 @@ const bufferdata = await getBuffer( anu.result.direct )
     
 	const mvdoc = await conn.sendMessage( jid , { 
 		document : bufferdata , 
-		fileName: `${config.FILE_NAME} ${nmf}.` + ext  , 
+		fileName: `🎬DSXT🎬 ${nmf}.` + ext  , 
 		mimetype: mime, 
 		caption: nmf + `\n${pk} ${quality} ${pk2}
 
-
-` + config.CAPTION
+>ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ
+`
 	})
 
 await conn.sendMessage(creator, { text: "Direct Upload" }, { quoted: mek })
@@ -937,10 +937,11 @@ await sleep(500 * 1)}
             await conn.sendMessage(jid, { 
 		    document: data, 
 		    mimetype: "video/mp4", 
-		    fileName: `${config.FILE_NAME} ${nmf}.mp4`, 
+		    fileName: `🎬DSXT🎬 ${nmf}.mp4`, 
 		    caption: nmf + ` ${pk} ${quality} ${pk2}
       
-` + config.CAPTION
+> ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ           
+`
 	    }); 
 
 await conn.sendMessage(creator, { text: "Mega Upload" }, { quoted: mek })
