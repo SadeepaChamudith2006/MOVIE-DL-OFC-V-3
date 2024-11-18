@@ -419,7 +419,7 @@ const ytdl = await fetchApi(`${apilink2}/download/ytmp3?url=${url}`)
 await conn.sendMessage(from, { react: { text: '⬆', key: mek.key } })
 	
 if(inp.includes("do")) {
-const dom = await conn.sendMessage(from, { document: { url: ytdl.result.dl_link }, mimetype: "audio/mpeg", fileName: ytdl.result.title + '.mp3', caption: `${ytdl.result.title}\n\n${config.CAPTION}` }, { quoted: mek })
+const dom = await conn.sendMessage(from, { document: { url: ytdl.result.dl_link }, mimetype: "audio/mpeg", fileName: ytdl.result.title + '.mp3', caption: `${ytdl.result.title}\n\n>ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ` }, { quoted: mek })
 await conn.sendMessage(from, { react: { text: '🎶', key: dom.key } })
 await conn.sendMessage(from, { react: { text: `✔`, key: mek.key } })
 } else if(inp.includes("au")) {
@@ -465,7 +465,7 @@ await conn.sendMessage(from, { react: { text: '⬆', key: mek.key } })
 if (!ytdl.dl_link) return reply(msr.try)
 	
 if(inp.includes("do")) {
-const dom = await conn.sendMessage(from, { document: { url: ytdl.dl_link }, mimetype: "video/mp4", fileName: title + '.mp4', caption: `${title} ( ${qua} )\n\n${config.CAPTION}` }, { quoted: mek })
+const dom = await conn.sendMessage(from, { document: { url: ytdl.dl_link }, mimetype: "video/mp4", fileName: title + '.mp4', caption: `${title} ( ${qua} )\n\n>ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ` }, { quoted: mek })
 await conn.sendMessage(from, { react: { text: '🎬', key: dom.key } })
 await conn.sendMessage(from, { react: { text: `✔`, key: mek.key } })
 
@@ -509,12 +509,12 @@ const fbdl = await fetchApi(`${apilink2}/download/fbdl1?url=${url}`)
 await conn.sendMessage(from, { react: { text: '⬆', key: mek.key } })
 	
 if(inp.includes("sd")) {
-const dom = await conn.sendMessage(from, { document: { url: fbdl.result.sd }, mimetype: "video/mp4", fileName: fbdl.result.title + '.mp4', caption: `${fbdl.result.title}\n\n${config.CAPTION}` }, { quoted: mek })
+const dom = await conn.sendMessage(from, { document: { url: fbdl.result.sd }, mimetype: "video/mp4", fileName: fbdl.result.title + '.mp4', caption: `${fbdl.result.title}\n\n>ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ` }, { quoted: mek })
 await conn.sendMessage(from, { react: { text: '🪫', key: dom.key } })
 await conn.sendMessage(from, { react: { text: `✔`, key: mek.key } })
 	
 } else if(inp.includes("hd")) {
-const aum = await conn.sendMessage(from, { document: { url: fbdl.result.hd }, mimetype: "video/mp4", fileName: fbdl.result.title + '.mp4', caption: `${fbdl.result.title}\n\n${config.CAPTION}` }, { quoted: mek })
+const aum = await conn.sendMessage(from, { document: { url: fbdl.result.hd }, mimetype: "video/mp4", fileName: fbdl.result.title + '.mp4', caption: `${fbdl.result.title}\n\n>ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ` }, { quoted: mek })
 await conn.sendMessage(from, { react: { text: '🔋', key: aum.key } })
 await conn.sendMessage(from, { react: { text: `✔`, key: mek.key } })
 } else {
@@ -549,10 +549,10 @@ const tt = await fetchApi(`${apilink2}/download/tiktok?url=${url}`)
 let tts = tt.result
 	
 if(inp.includes("wt")) {
-await conn.sendMessage(from, { video: { url: tts.wmVideo }, mimetype: "video/mp4", caption: `WATERMARK-VIDEO ✅\n\n${tts.title}\n\n${config.CAPTION}` }, { quoted: mek })
+await conn.sendMessage(from, { video: { url: tts.wmVideo }, mimetype: "video/mp4", caption: `WATERMARK-VIDEO ✅\n\n${tts.title}\n\n>ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ` }, { quoted: mek })
 await conn.sendMessage(from, { react: { text: `✔`, key: mek.key } })
 } else if(inp.includes("hd")) {
-await conn.sendMessage(from, { video: { url: tts.hdVideo }, mimetype: "video/mp4", caption: `NON-WATERMARK-VIDEO ✅\n\n${tts.title}\n\n${config.CAPTION}` }, { quoted: mek })
+await conn.sendMessage(from, { video: { url: tts.hdVideo }, mimetype: "video/mp4", caption: `NON-WATERMARK-VIDEO ✅\n\n${tts.title}\n\n>ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ` }, { quoted: mek })
 await conn.sendMessage(from, { react: { text: `✔`, key: mek.key } })
 } else if(inp.includes("so")) {
 await conn.sendMessage(from, { audio: { url: tts.sound }, mimetype: "audio/mpeg" }, { quoted: mek })
@@ -594,7 +594,7 @@ let msg = `📚 *ᴀᴘᴋ ɴᴀᴍᴇ :* ${apkdl.result.name}
 	
 	
 await conn.sendMessage(from, { image: { url: apkdl.result.image || '' }, caption: msg + '\n\n' + config.CAPTION }, { quoted: mek })
-const dom = await conn.sendMessage(from, { document: { url: apkdl.result.dl_link }, mimetype: "application/vnd.android.package-archive", fileName: apkdl.result.name + '.apk', caption: `${apkdl.result.name}\n\n${config.CAPTION}` }, { quoted: mek })
+const dom = await conn.sendMessage(from, { document: { url: apkdl.result.dl_link }, mimetype: "application/vnd.android.package-archive", fileName: apkdl.result.name + '.apk', caption: `${apkdl.result.name}\n\n>ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ` }, { quoted: mek })
 await conn.sendMessage(from, { react: { text: '📦', key: dom.key } })
 await conn.sendMessage(from, { react: { text: `✔`, key: mek.key } })	
 } catch (e) {
@@ -634,11 +634,11 @@ fs.writeFileSync('tab.jpg', data2)
 await conn.sendMessage(from, { react: { text: '⬆', key: mek.key } })
 	
 if(inp.includes("tb1")) {
-const dom = await conn.sendMessage(from, { image: fs.readFileSync('tab.jpg'), caption: `\n${config.CAPTION}` }, { quoted: mek })
+const dom = await conn.sendMessage(from, { image: fs.readFileSync('tab.jpg'), caption: `\n>ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ` }, { quoted: mek })
 await conn.sendMessage(from, { react: { text: '📸', key: dom.key } })
 await conn.sendMessage(from, { react: { text: `✔`, key: mek.key } })	
 } else if(inp.includes("wb1")) {
-const aum = await conn.sendMessage(from, { image: fs.readFileSync('web.jpg'), caption: `\n${config.CAPTION}` }, { quoted: mek })
+const aum = await conn.sendMessage(from, { image: fs.readFileSync('web.jpg'), caption: `\n>ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ` }, { quoted: mek })
 await conn.sendMessage(from, { react: { text: '📸', key: aum.key } })
 await conn.sendMessage(from, { react: { text: `✔`, key: mek.key } })
 

@@ -445,12 +445,12 @@ const jid = jidx || from
 await conn.sendMessage(jid ,  { image : { url : mov.images[0] || mov.image || config.LOGO } , caption : yt + `
 
 
-${config.CAPTION}` })
+>ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ` })
 
 await conn.sendMessage(backup ,  { image : { url : mov.images[0] || mov.image || config.LOGO } , caption : yt + `
 
 
-${config.CAPTION}` })	
+>ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ` })	
 
 if (jidx === from) { 
 await conn.sendMessage(from, { react: { text: '✔', key: mek.key } }) 
@@ -527,12 +527,12 @@ const jid = jidx || from
 await conn.sendMessage(jid ,  { image : { url : mov.image } , text : yt + `
 
 
-${config.CAPTION}` })
+>ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ` })
 
 await conn.sendMessage(backup ,  { image : { url : mov.image } , text : yt + `
 
 
-${config.CAPTION}` })	
+>ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ` })	
 
 if (jidx === from) { 
 await conn.sendMessage(from, { react: { text: '✔', key: mek.key } }) 
@@ -598,12 +598,12 @@ const jid = jidx || from
 await conn.sendMessage(jid ,  { image : { url : mov.image } , text : yt + `
 
 
-${config.CAPTION}`})
+>ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ`})
 
 await conn.sendMessage(backup ,  { image : { url : mov.image } , text : yt + `
 
 
-${config.CAPTION}`})
+>ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ`})
 
 if (jidx === from) { 
 await conn.sendMessage(from, { react: { text: '✔', key: mek.key } }) 
@@ -666,12 +666,12 @@ const jid = jidx || from
 await conn.sendMessage(jid ,  { image : { url : mov.images[0] || '' } , caption : yt + `
 
 
-${config.CAPTION}`})
+>ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ`})
 
 await conn.sendMessage(backup ,  { image : { url : mov.images[0] || '' } , caption : yt + `
 
 
-${config.CAPTION}`})	
+>ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ`})	
 
 if (jidx === from) { 
 await conn.sendMessage(from, { react: { text: '✔', key: mek.key } }) 
@@ -734,12 +734,12 @@ const jid = jidx || from
 await conn.sendMessage(jid ,  { image : { url : mov.image } , text : yt + `
 
 
-${config.CAPTION}`})
+>ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ`})
 
 await conn.sendMessage(backup ,  { image : { url : mov.image } , text : yt + `
 
 
-${config.CAPTION}`})
+>ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ`})
 
 if (jidx === from) { 
 await conn.sendMessage(from, { react: { text: '✔', key: mek.key } }) 
@@ -836,7 +836,7 @@ const up_mg = await conn.sendMessage(from, { text : 'Uploading Your Request Vide
             await conn.sendMessage(jid, { 
 		    document: data, 
 		    mimetype: "video/mp4", 
-		    fileName: `${config.FILE_NAME} ${nmf}.mp4`, 
+		    fileName: `🎬DSXT🎬 ${nmf}.mp4`, 
 		    caption: nmf + ` ${pk} ${quality} ${pk2}
       
 ` + config.CAPTION
@@ -866,7 +866,7 @@ const up_mg = await conn.sendMessage(from, { text : 'Uploading Your Request Vide
 		     
 const mvdoc = await conn.sendMessage( jid , { 
 		document : { url: await getBuffer(inp) }, 
-		fileName: `${config.FILE_NAME} ${nmf}.mp4`,
+		fileName: `🎬DSXT🎬 ${nmf}.mp4`,
 		mimetype: "video/mp4", 
 		caption:  nmf + ` ${pk} ${quality} ${pk2}
 
@@ -895,7 +895,7 @@ const up_mg = await conn.sendMessage(from, { text : 'Uploading Your Request Vide
 		     
 const mvdoc = await conn.sendMessage( jid , { 
 		document : { url: inp + "?download" }, 
-		fileName: `${config.FILE_NAME} ${nmf}.mp4`,
+		fileName: `🎬DSXT🎬 ${nmf}.mp4`,
 		mimetype: "video/mp4", 
 		caption:  nmf + ` ${pk} ${quality} ${pk2}
 
@@ -1010,7 +1010,7 @@ const up_mg = await conn.sendMessage(from, { text : 'Uploading Your Request Vide
             await conn.sendMessage(jid, { 
 		    document: data, 
 		    mimetype: "video/mp4", 
-		    fileName: `${config.FILE_NAME} ${nmf}.mp4`, 
+		    fileName: `🎬DSXT🎬 ${nmf}.mp4`, 
 		    caption: nmf + ` ${pk} ${quality} ${pk2}
       
 ` + config.CAPTION
@@ -1039,7 +1039,7 @@ const up_mg = await conn.sendMessage(from, { text : 'Uploading Your Request Vide
 		     
 const mvdoc = await conn.sendMessage( jid , { 
 		document : { url: await getBuffer(inp) }, 
-		fileName: `${config.FILE_NAME} ${nmf}.mp4`,
+		fileName: `🎬DSXT🎬 ${nmf}.mp4`,
 		mimetype: "video/mp4", 
 		caption:  nmf + ` ${pk} ${quality} ${pk2}
 
@@ -1069,7 +1069,7 @@ const up_mg = await conn.sendMessage(from, { text : 'Uploading Your Request Vide
 		     
 const mvdoc = await conn.sendMessage( jid , { 
 		document : { url: inp + "?download" }, 
-		fileName: `${config.FILE_NAME} ${nmf}.mp4`,
+		fileName: `🎬DSXT🎬 ${nmf}.mp4`,
 		mimetype: "video/mp4", 
 		caption:  nmf + ` ${pk} ${quality} ${pk2}
 
