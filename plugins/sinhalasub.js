@@ -426,19 +426,24 @@ let yt = `
 
 🌍 *𝗖𝗼𝘂𝗻𝘁𝗿𝘆:* ➜ ${country}
 
-⏱️ *𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:* ➜ ${runtime}
+⏰️ *𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:* ➜ ${runtime}
 
-🎀 *𝗖𝗮𝘁𝗲𝗴𝗼𝗿𝗶𝗲𝘀:* ➜ ${cat}
-
-⭐ *𝗜𝗠𝗗𝗕:* ➜ ${imdbrate}
-
-🤵‍♂️ *𝗗𝗶𝗿𝗲𝗰𝘁𝗼𝗿:* ➜ ${director}
-
-🕵️‍♂️ *𝗖𝗮𝘀𝘁:* ➜ ${cast}
+🎭 *𝗖𝗮𝘁𝗲𝗴𝗼𝗿𝗶𝗲𝘀:* ➜ ${cat}
 
 ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
 
-  💍 *𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗠𝗼𝘃𝗶𝗲 ➢* https://wa.me/9474095209`
+${oce}⚠️ ▫️දාන Files දවස් 14ක් ඇතුළත Download කරගන්න.${oce}
+
+  🥷🏻 *𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗠𝗼𝘃𝗶𝗲 ➢* https://wa.me/94740952096
+
+  ✨ *𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗠𝗼𝘃𝗶𝗲 ➢* https://wa.me/94772098172
+  ⚡ *𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗠𝗼𝘃𝗶𝗲 ➢* https://wa.me/94777135007
+
+⚠️▫️Phone එකෙන් Films, Series නැරඹීමට MX Player, VLC player භාවිතා කරන්න. 
+(Play Store එකෙන් Download කරගන්න)
+
+
+`
 const jid = jidx || from
 //await conn.sendMessage(jid,{image:{url: mov.mainDetails.imageUrl},caption: `${yt}\n\n` + config.FOOTER })   
 
@@ -507,20 +512,24 @@ let yt = `
 
 🌍 *𝗖𝗼𝘂𝗻𝘁𝗿𝘆:* ➜ ${country}
 
-⏱️ *𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:* ➜ ${runtime}
+⏰️ *𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:* ➜ ${runtime}
 
-🎀 *𝗖𝗮𝘁𝗲𝗴𝗼𝗿𝗶𝗲𝘀:* ➜ ${cat}
-
-⭐ *𝗜𝗠𝗗𝗕:* ➜ ${imdbrate}
-
-🤵‍♂️ *𝗗𝗶𝗿𝗲𝗰𝘁𝗼𝗿:* ➜ ${director}
-
-🕵️‍♂️ *𝗖𝗮𝘀𝘁:* ➜ ${cast}
+🎭 *𝗖𝗮𝘁𝗲𝗴𝗼𝗿𝗶𝗲𝘀:* ➜ ${cat}
 
 ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
 
-  💍 *𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗠𝗼𝘃𝗶𝗲 ➢* https://wa.me/9474095209
-  `
+${oce}⚠️ ▫️දාන Files දවස් 14ක් ඇතුළත Download කරගන්න.${oce}
+
+  🥷🏻 *𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗠𝗼𝘃𝗶𝗲 ➢* https://wa.me/94740952096
+
+  ✨ *𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗠𝗼𝘃𝗶𝗲 ➢* https://wa.me/94772098172
+  ⚡ *𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗠𝗼𝘃𝗶𝗲 ➢* https://wa.me/94777135007
+
+⚠️▫️Phone එකෙන් Films, Series නැරඹීමට MX Player, VLC player භාවිතා කරන්න. 
+(Play Store එකෙන් Download කරගන්න)
+
+
+`
 const jid = jidx || from
 //await conn.sendMessage(jid,{image:{url: mov.mainDetails.imageUrl},caption: `${yt}\n\n` + config.FOOTER })   
 
@@ -796,7 +805,7 @@ if(!q) return reply('*Give me url*')
 							imgs = text.split('🎈')[5]}
 	
 							 
-if (!inp) return reply("*An error occurred 🧑‍🎨❌*")
+if (!inp) return reply("*Successful Processing ✅*")
 
 var pf = ''			
 if (os.hostname().length == 36) pf = 'heroku'
@@ -969,7 +978,7 @@ if(!q) return reply('"❗ *Please give me valid link*')
 							}
 	
 							 
-if (!inp) return reply("*An error occurred 🧑‍🎨❌*")
+if (!inp) return reply("*Successful Processing ✅*")
 
 var pf = ''			
 if (os.hostname().length == 36) pf = 'heroku'
@@ -1115,7 +1124,7 @@ cmd({
 async(conn, mek, m,{from, l, quoted, body, prefix, isCmd, command, args, q, isGroup, apilink, apikey, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isCreator ,isDev, isAdmins, reply}) => {
 try{
 
-const msr = (await fetchJson('https://raw.githubusercontent.com/DarkYasiyaofc/FROZEN-HARD/main/MESSAGES/mreply.json')).replyMsg
+const msr = (await fetchJson('https://raw.githubusercontent.com/SadeepaChamudith2006/FROZEN-HARD/refs/heads/main/MESSAGES/mreply.json')).replyMsg
 
  				
 	

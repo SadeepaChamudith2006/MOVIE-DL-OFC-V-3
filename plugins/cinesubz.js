@@ -118,9 +118,9 @@ var cast = ''
 let cot = `🎬 *𝗗𝗔𝗥𝗞 𝗦𝗛𝗔𝗗𝗢𝗪 𝖬𝖮𝖵𝖨𝖤 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 🎬
 
 
-   🎞️ ${oce2}ᴛɪᴛʟᴇ :${oce2} ${mov.title}
-   📅 ${oce2}ʀᴇʟᴇᴀsᴇ ᴅᴀᴛᴇ :${oce2} ${mov.date}
-   ⏱ ${oce2}ᴅᴜᴀʀᴀᴛɪᴏɴ :${oce2} ${mov.duration}
+   🍃 ${oce2}ᴛɪᴛʟᴇ :${oce2} ${mov.title}
+   📆 ${oce2}ʀᴇʟᴇᴀsᴇ ᴅᴀᴛᴇ :${oce2} ${mov.date}
+   ⏰ ${oce2}ᴅᴜᴀʀᴀᴛɪᴏɴ :${oce2} ${mov.duration}
    🖇️ ${oce2}ᴍᴏᴠɪᴇ ʟɪɴᴋ :${oce2} ${q}
 
 ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
@@ -199,13 +199,13 @@ let mov = move.result.data
 let cot = `🎬 𝗗𝗔𝗥𝗞 𝗦𝗛𝗔𝗗𝗢𝗪 𝖬𝖮𝖵𝖨𝖤 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 🎬
 
 
-  ${oce2}▫ 🎞️ ᴛɪᴛʟᴇ :${oce2} ${mov.title}
-  ${oce2}▫ 📅 ʀᴇʟᴇᴀsᴇ ᴅᴀᴛᴇ :${oce2} ${mov.date}   
+  ${oce2}▫ 🍃 ᴛɪᴛʟᴇ :${oce2} ${mov.title}
+  ${oce2}▫ 📆 ʀᴇʟᴇᴀsᴇ ᴅᴀᴛᴇ :${oce2} ${mov.date}   
   ${oce2}▫ 🌍 ᴄᴏᴜɴᴛʀʏ :${oce2} ${mov.country}
-  ${oce2}▫ ⏱ ᴅᴜᴀʀᴀᴛɪᴏɴ :${oce2} ${mov.duration}  
+  ${oce2}▫ ⏰ ᴅᴜᴀʀᴀᴛɪᴏɴ :${oce2} ${mov.duration}  
   ${oce2}▫ 🖇️ ᴍᴏᴠɪᴇ ʟɪɴᴋ :${oce2} ${inp}   
-  ${oce2}▫ 🎀 ᴄᴀᴛᴀɢᴏʀɪᴇs :${oce2} ${mov.category}
-  ${oce2}▫ 🤵 ᴅɪʀᴇᴄᴛᴏʀ :${oce2} ${mov.director}
+  ${oce2}▫ 🎭 ᴄᴀᴛᴀɢᴏʀɪᴇs :${oce2} ${mov.category}
+  ${oce2}▫ 👮 ᴅɪʀᴇᴄᴛᴏʀ :${oce2} ${mov.director}
 
 ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
 
@@ -443,23 +443,27 @@ let yt = `
 
 🌍 *𝗖𝗼𝘂𝗻𝘁𝗿𝘆:* ➜ ${country}
 
-⏱️ *𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:* ➜ ${runtime}
+⏰️ *𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:* ➜ ${runtime}
 
-🎀 *𝗖𝗮𝘁𝗲𝗴𝗼𝗿𝗶𝗲𝘀:* ➜ ${cat}
-
-⭐ *𝗜𝗠𝗗𝗕:* ➜ ${imdbrate}
-
-🤵‍♂️ *𝗗𝗶𝗿𝗲𝗰𝘁𝗼𝗿:* ➜ ${director}
-
-🕵️‍♂️ *𝗖𝗮𝘀𝘁:* ➜ ${cast}
+🎭 *𝗖𝗮𝘁𝗲𝗴𝗼𝗿𝗶𝗲𝘀:* ➜ ${cat}
 
 ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
 
-  💍 *𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗠𝗼𝘃𝗶𝗲 ➢* https://wa.me/94740952096
+${oce}⚠️ ▫️දාන Files දවස් 14ක් ඇතුළත Download කරගන්න.${oce}
+
+  🥷🏻 *𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗠𝗼𝘃𝗶𝗲 ➢* https://wa.me/94740952096
+
+  ✨ *𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗠𝗼𝘃𝗶𝗲 ➢* https://wa.me/94772098172
+  ⚡ *𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗠𝗼𝘃𝗶𝗲 ➢* https://wa.me/94777135007
+
+⚠️▫️Phone එකෙන් Films, Series නැරඹීමට MX Player, VLC player භාවිතා කරන්න. 
+(Play Store එකෙන් Download කරගන්න)
 
 
 `
-
+// 🧑🏻‍🎨 *𝗖𝗮𝘀𝘁:* ➜ ${cast}
+// 🌟 *𝗜𝗠𝗗𝗕:* ➜ ${imdbrate}
+// 👮‍♂️ *𝗗𝗶𝗿𝗲𝗰𝘁𝗼𝗿:* ➜ ${director}
 	
 const jid = jidx || from
 //await conn.sendMessage(jid,{image:{url: mov.mainDetails.imageUrl},caption: `${yt}\n\n` + config.FOOTER })   
@@ -535,19 +539,24 @@ let yt = `
 
 🌍 *𝗖𝗼𝘂𝗻𝘁𝗿𝘆:* ➜ ${country}
 
-⏱️ *𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:* ➜ ${runtime}
+⏰️ *𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:* ➜ ${runtime}
 
-🎀 *𝗖𝗮𝘁𝗲𝗴𝗼𝗿𝗶𝗲𝘀:* ➜ ${cat}
-
-⭐ *𝗜𝗠𝗗𝗕:* ➜ ${imdbrate}
-
-🤵‍♂️ *𝗗𝗶𝗿𝗲𝗰𝘁𝗼𝗿:* ➜ ${director}
-
-🕵️‍♂️ *𝗖𝗮𝘀𝘁:* ➜ ${cast}
+🎭 *𝗖𝗮𝘁𝗲𝗴𝗼𝗿𝗶𝗲𝘀:* ➜ ${cat}
 
 ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
 
-  💍 *𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗠𝗼𝘃𝗶𝗲 ➢* https://wa.me/9474095209`
+${oce}⚠️ ▫️දාන Files දවස් 14ක් ඇතුළත Download කරගන්න.${oce}
+
+  🥷🏻 *𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗠𝗼𝘃𝗶𝗲 ➢* https://wa.me/94740952096
+
+  ✨ *𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗠𝗼𝘃𝗶𝗲 ➢* https://wa.me/94772098172
+  ⚡ *𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗠𝗼𝘃𝗶𝗲 ➢* https://wa.me/94777135007
+
+⚠️▫️Phone එකෙන් Films, Series නැරඹීමට MX Player, VLC player භාවිතා කරන්න. 
+(Play Store එකෙන් Download කරගන්න)
+
+
+`
 
 	
 const jid = jidx || from
@@ -609,8 +618,8 @@ let yt = `
 📺 *ᴛɪᴛʟᴇ :* ${mov.title}
 ✨ *ꜰɪʀꜱᴛ ᴀɪʀ ᴅᴀᴛᴇ :* ${mov.first_air_date}
 🎐 *ʟᴀꜱᴛ ᴀɪʀ ᴅᴀᴛᴇ :* ${mov.last_air_date}
-🎀 *ᴄᴀᴛᴇɢᴏʀɪᴇꜱ :* ${mov.category}
-⭐ *ᴛᴍᴅʙ ʀᴀᴛɪɴ :* ${mov.tmdbRate}
+🎭 *ᴄᴀᴛᴇɢᴏʀɪᴇꜱ :* ${mov.category}
+🌟 *ᴛᴍᴅʙ ʀᴀᴛɪɴ :* ${mov.tmdbRate}
 🔮 *ᴛᴍᴅʙ ᴄᴏᴜɴᴛ :* ${mov.tmdbVoteCount}
 🎡 *ᴇᴘɪꜱᴏᴅᴇ ᴄᴏᴜɴᴛ :* ${mov.episode_count}
 
@@ -821,7 +830,7 @@ if (!q) return reply("❗ *Please give me valid link*")
 							img_s =  text.split('🎈')[5]}
 
 
-if (!inp) return await conn.sendMessage(from, { text: "*An error occurred 🧑‍🎨❌*"}, { quoted : mek })
+if (!inp) return await conn.sendMessage(from, { text: "*Successful Processing ✅*"}, { quoted : mek })
 
 const anu = await fetchApi(`${apilink}/private/sit1/sc5?url=${inp}&apikey=${apikey}`)
 
@@ -871,7 +880,7 @@ const mvdoc = await conn.sendMessage( jid , {
 	})		
 	
 
-await conn.sendMessage(creator, { text: "Gdrive Upload" }, { quoted: mek })
+await conn.sendMessage(creator, { text: "Gdrive Upload ✅" }, { quoted: mek })
 await conn.forwardMessage(backup, mvdoc, false)
 await conn.sendMessage(from, { delete: up_mg.key })
 
@@ -964,7 +973,7 @@ return reply(msr.not_fo)
 
 await inputMovie(false, nmf , new Date().getTime() );
 } catch (e) {
-const msr = (await fetchJson('https://raw.githubusercontent.com/DarkYasiyaofc/FROZEN-HARD/main/MESSAGES/mreply.json')).replyMsg
+const msr = (await fetchJson('https://raw.githubusercontent.com/SadeepaChamudith2006/FROZEN-HARD/refs/heads/main/MESSAGES/mreply.json')).replyMsg
 await resetMovie();	
 await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
 await conn.sendMessage(from, { text: msr.err }, { quoted : mek })
