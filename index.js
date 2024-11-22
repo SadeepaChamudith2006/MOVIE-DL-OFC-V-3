@@ -89,7 +89,7 @@ const {
   }
     
   const isCreator = ['']
-  const backup = "120363356169518376@g.us"
+  //const backup = "120363356169518376@g.us"
   const apilink = "https://www.dark-yasiya-api.site"
   const apilink2 = "https://www.dark-yasiya-api.site"
   const apikey = "private999apikey"
