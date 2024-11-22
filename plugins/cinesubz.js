@@ -6,6 +6,9 @@ const { inputMovie, getMovie, resetMovie } = require("../lib/movie_db")
 const fg = require('api-dylux');
 const fetch = require('node-fetch');
 var os = require('os');
+const fs = require("fs-extra");
+const Cinesubz = require("../lib/cinesubz");
+const cine = new Cinesubz()
 
 const oce = "`"
 const oce3 = "```"
@@ -16,7 +19,7 @@ const { File } = require('megajs');
 
 const { storenumrepdata } = require('../lib/numrepstore')
 function formatNumber(num) {
-    return String(num).padStart(1, '0');
+    return String(num).padStart(2, '0');
 } 
 
 
@@ -46,7 +49,7 @@ let numrep = []
 if (movs.result.data.length < 1) return await reply(msr.not_fo)
 
 		
-let cot = `🔮 *𝗗𝗔𝗥𝗞 𝗦𝗛𝗔𝗗𝗢𝗪 𝖬𝖮𝖵𝖨𝖤 𝖲𝖤𝖠𝖱𝖢𝖧 𝖲𝖸𝖲𝖳𝖤𝖬* 🔮
+let cot = `🔮 *𝖬𝖮𝖵𝖨𝖤-𝖷 𝖬𝖮𝖵𝖨𝖤 𝖲𝖤𝖠𝖱𝖢𝖧 𝖲𝖸𝖲𝖳𝖤𝖬* 🔮
 
 
 📲 ${oce}Input:${oce} *${q}*
@@ -86,9 +89,8 @@ let cot = `🔮 *𝗗𝗔𝗥𝗞 𝗦𝗛𝗔𝗗𝗢𝗪 𝖬𝖮𝖵𝖨𝖤 
 await storenumrepdata(jsonmsg) 	
 } catch (e) {
 await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
-await conn.sendMessage(from, { text: msr.err }, { quoted : mek })
+reply(msr.err)
 console.log(e)
-await conn.sendMessage(creator, { text: `❌ *Error Accurated !!*\n\n${e}` + '' }, { quoted : mek })
 }
 })
 
@@ -115,12 +117,12 @@ var cast = ''
   cast += i.cast_name + ','
 }
     
-let cot = `🎬 *𝗗𝗔𝗥𝗞 𝗦𝗛𝗔𝗗𝗢𝗪 𝖬𝖮𝖵𝖨𝖤 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 🎬
+let cot = `🎬 *𝖬𝖮𝖵𝖨𝖤-𝖷 𝖬𝖮𝖵𝖨𝖤 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 🎬
 
 
-   🍃 ${oce2}ᴛɪᴛʟᴇ :${oce2} ${mov.title}
-   📆 ${oce2}ʀᴇʟᴇᴀsᴇ ᴅᴀᴛᴇ :${oce2} ${mov.date}
-   ⏰ ${oce2}ᴅᴜᴀʀᴀᴛɪᴏɴ :${oce2} ${mov.duration}
+   🎞️ ${oce2}ᴛɪᴛʟᴇ :${oce2} ${mov.title}
+   📅 ${oce2}ʀᴇʟᴇᴀsᴇ ᴅᴀᴛᴇ :${oce2} ${mov.date}
+   ⏱ ${oce2}ᴅᴜᴀʀᴀᴛɪᴏɴ :${oce2} ${mov.duration}
    🖇️ ${oce2}ᴍᴏᴠɪᴇ ʟɪɴᴋ :${oce2} ${q}
 
 ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
@@ -164,9 +166,8 @@ for (let j = 0 ; j < config.JIDS.length; j++) {
 await storenumrepdata(jsonmsg) 	 
 } catch (e) {
 await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
-await conn.sendMessage(from, { text: msr.err }, { quoted : mek })
+reply(msr.err)
 console.log(e)
-await conn.sendMessage(creator, { text: `❌ *Error Accurated !!*\n\n${e}` + '' }, { quoted : mek })
 }
 })
 
@@ -196,16 +197,16 @@ if(!inp) return await reply(msr.err)
 const move = await fetchApi(`${apilink}/private/sit1/sc2?url=${inp}&apikey=${apikey}`)
 let mov = move.result.data
 	
-let cot = `🎬 𝗗𝗔𝗥𝗞 𝗦𝗛𝗔𝗗𝗢𝗪 𝖬𝖮𝖵𝖨𝖤 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 🎬
+let cot = `🎬 *𝖬𝖮𝖵𝖨𝖤-𝖷 𝖬𝖮𝖵𝖨𝖤 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 🎬
 
 
-  ${oce2}▫ 🍃 ᴛɪᴛʟᴇ :${oce2} ${mov.title}
-  ${oce2}▫ 📆 ʀᴇʟᴇᴀsᴇ ᴅᴀᴛᴇ :${oce2} ${mov.date}   
+  ${oce2}▫ 🎞️ ᴛɪᴛʟᴇ :${oce2} ${mov.title}
+  ${oce2}▫ 📅 ʀᴇʟᴇᴀsᴇ ᴅᴀᴛᴇ :${oce2} ${mov.date}   
   ${oce2}▫ 🌍 ᴄᴏᴜɴᴛʀʏ :${oce2} ${mov.country}
-  ${oce2}▫ ⏰ ᴅᴜᴀʀᴀᴛɪᴏɴ :${oce2} ${mov.duration}  
+  ${oce2}▫ ⏱ ᴅᴜᴀʀᴀᴛɪᴏɴ :${oce2} ${mov.duration}  
   ${oce2}▫ 🖇️ ᴍᴏᴠɪᴇ ʟɪɴᴋ :${oce2} ${inp}   
-  ${oce2}▫ 🎭 ᴄᴀᴛᴀɢᴏʀɪᴇs :${oce2} ${mov.category}
-  ${oce2}▫ 👮 ᴅɪʀᴇᴄᴛᴏʀ :${oce2} ${mov.director}
+  ${oce2}▫ 🎀 ᴄᴀᴛᴀɢᴏʀɪᴇs :${oce2} ${mov.category}
+  ${oce2}▫ 🤵 ᴅɪʀᴇᴄᴛᴏʀ :${oce2} ${mov.director}
 
 ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
 
@@ -224,7 +225,7 @@ numrep.push(`${prefix}cineimages ${q}`)
 				
                   cot += `*${formatNumber( index + 3 )} ||* ${movie.quality} ( ${movie.size} )\n`
 				
-                  numrep.push(`${prefix}cinedirectdl ${movie.link}🎈${mov.title}🎈${movie.quality}🎈${movie.size}🎈${jidx}🎈${mov.mainImage}` )
+                  numrep.push(`${prefix}cinedirectdl ${movie.link}🎈${mov.title}🎈${movie.quality}🎈${movie.size}🎈${jidx}🎈${mov.image}` )
                   })
                  
 
@@ -239,9 +240,8 @@ numrep.push(`${prefix}cineimages ${q}`)
 await storenumrepdata(jsonmsg) 
 } catch (e) {
 await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
-await conn.sendMessage(from, { text: msr.err }, { quoted : mek })
+reply(msr.err)
 console.log(e)
-await conn.sendMessage(creator, { text: `❌ *Error Accurated !!*\n\n${e}` + '' }, { quoted : mek })
 }
 })
 
@@ -265,7 +265,7 @@ const move = await fetchApi(`${apilink}/private/sit1/sc3?url=${q}&apikey=${apike
 let mov = move.result.data
     
 
-let cot = `📺 *𝗗𝗔𝗥𝗞 𝗦𝗛𝗔𝗗𝗢𝗪 𝖳𝖵 𝖲𝖧𝖮𝖶 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 📺
+let cot = `📺 *𝖬𝖮𝖵𝖨𝖤-𝖷 𝖳𝖵 𝖲𝖧𝖮𝖶 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 📺
 
 
   🎞 ${oce2}ᴛɪᴛʟᴇ :${oce2} ${mov.title}
@@ -314,9 +314,8 @@ for (let j = 0 ; j < config.JIDS.length; j++) {
 await storenumrepdata(jsonmsg) 
 } catch (e) {
 await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
-await conn.sendMessage(from, { text: msr.err }, { quoted : mek })
+reply(msr.err)
 console.log(e)
-await conn.sendMessage(creator, { text: `❌ *Error Accurated !!*\n\n${e}` + '' }, { quoted : mek })
 }
 })
 
@@ -346,7 +345,7 @@ if(!q) return await reply(msr.url)
 const move = await fetchApi(`${apilink}/private/sit1/sc4?url=${inp}&apikey=${apikey}`)
 let mov = move.result.data
 	    
-let cot = `📺 *𝗗𝗔𝗥𝗞 𝗦𝗛𝗔𝗗𝗢𝗪 𝖳𝖵 𝖲𝖧𝖮𝖶 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 📺
+let cot = `📺 *𝖬𝖮𝖵𝖨𝖤-𝖷 𝖳𝖵 𝖲𝖧𝖮𝖶 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 📺
 
 
   📽 ${oce3}Episode Name:${oce3} ${mov.episode_name}
@@ -387,9 +386,8 @@ numrep.push(`${prefix}cineimages ${q}`)
 await storenumrepdata(jsonmsg) 
 } catch (e) {
 await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
-await conn.sendMessage(from, { text: msr.err }, { quoted : mek })
+reply(msr.err)
 console.log(e)
-await conn.sendMessage(creator, { text: `❌ *Error Accurated !!*\n\n${e}` + '' }, { quoted : mek })
 }
 })
 
@@ -436,42 +434,38 @@ const imdbvote = mov.imdbVoteCount
 const director = mov.director
 	
 let yt = `
-🍃Ｔɪᴛʟᴇ _*${name}*_
+🍟 _*${name}*_
 
 
-🧿 *𝗥𝗲𝗹𝗲𝗮𝘀𝗲 𝗗𝗮𝘁𝗲:* ➜ ${date}
+🧿 ${oce}Release Date:${oce} ➜ ${date}
 
-🌍 *𝗖𝗼𝘂𝗻𝘁𝗿𝘆:* ➜ ${country}
+🌍 ${oce}Country:${oce} ➜ ${country}
 
-⏰️ *𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:* ➜ ${runtime}
+⏱️ ${oce}Duration:${oce} ➜ ${runtime}
 
-🎭 *𝗖𝗮𝘁𝗲𝗴𝗼𝗿𝗶𝗲𝘀:* ➜ ${cat}
+🎀 ${oce}Categories:${oce} ➜ ${cat}
+
+⭐ ${oce}IMDB:${oce} ➜ ${imdbrate}
+
+🤵‍♂️ ${oce}Director:${oce} ➜ ${director}
+
+🕵️‍♂️ ${oce}Cast:${oce} ➜ ${cast}
 
 ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
 
-${oce}⚠️ ▫️දාන Files දවස් 14ක් ඇතුළත Download කරගන්න.${oce}
-
-  🥷🏻 *𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗠𝗼𝘃𝗶𝗲 ➢* https://wa.me/94740952096
-
-  ✨ *𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗠𝗼𝘃𝗶𝗲 ➢* https://wa.me/94772098172
-  ⚡ *𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗠𝗼𝘃𝗶𝗲 ➢* https://wa.me/94777135007
-
-⚠️▫️Phone එකෙන් Films, Series නැරඹීමට MX Player, VLC player භාවිතා කරන්න. 
-(Play Store එකෙන් Download කරගන්න)
+  💃 *ғᴏʟʟᴏᴡ ᴜs ➢* https://whatsapp.com/channel/0029VaaPfFK7Noa8nI8zGg27
 
 
 `
-// 🧑🏻‍🎨 *𝗖𝗮𝘀𝘁:* ➜ ${cast}
-// 🌟 *𝗜𝗠𝗗𝗕:* ➜ ${imdbrate}
-// 👮‍♂️ *𝗗𝗶𝗿𝗲𝗰𝘁𝗼𝗿:* ➜ ${director}
+
 	
 const jid = jidx || from
 //await conn.sendMessage(jid,{image:{url: mov.mainDetails.imageUrl},caption: `${yt}\n\n` + config.FOOTER })   
 
 const movImg = mov.mainImage.replace("fit=", "fit")
 	
-await conn.sendMessage(jid ,  { image : { url : movImg || mov.images[0] || mov.image || "" } , caption : yt + `> ᴜᴘʟᴏᴀᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ` })
-await conn.sendMessage(backup ,  { image : { url : movImg || mov.images[0] || mov.image || "" } , caption : yt + `> ᴜᴘʟᴏᴀᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ` })
+await conn.sendMessage(jid ,  { image : { url : movImg || mov.images[0] || mov.image || "" } , caption : yt + `${config.CAPTION}` })
+await conn.sendMessage(backup ,  { image : { url : movImg || mov.images[0] || mov.image || "" } , caption : yt + `${config.CAPTION}` })
 
 if (jidx === from) { 
 await conn.sendMessage(from, { react: { text: '✔', key: mek.key } }) 
@@ -486,9 +480,8 @@ await conn.sendMessage(from, { react: { text: '✔', key: mek.key } })
 	
 } catch (e) {
 await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
-await conn.sendMessage(from, { text: msr.err }, { quoted : mek })
+reply(msr.err)
 console.log(e)
-await conn.sendMessage(creator, { text: `❌ *Error Accurated !!*\n\n${e}` + '' }, { quoted : mek })
 }
 })
 
@@ -532,28 +525,26 @@ const imdbvote = mov.imdbVoteCount
 const director = mov.director
 	
 let yt = `
-🍃Ｔɪᴛʟᴇ _*${name}*_
+🍟 _*${name}*_
 
 
-🧿 *𝗥𝗲𝗹𝗲𝗮𝘀𝗲 𝗗𝗮𝘁𝗲:* ➜ ${date}
+🧿 ${oce}Release Date:${oce} ➜ ${date}
 
-🌍 *𝗖𝗼𝘂𝗻𝘁𝗿𝘆:* ➜ ${country}
+🌍 ${oce}Country:${oce} ➜ ${country}
 
-⏰️ *𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:* ➜ ${runtime}
+⏱️ ${oce}Duration:${oce} ➜ ${runtime}
 
-🎭 *𝗖𝗮𝘁𝗲𝗴𝗼𝗿𝗶𝗲𝘀:* ➜ ${cat}
+🎀 ${oce}Categories:${oce} ➜ ${cat}
+
+⭐ ${oce}IMDB:${oce} ➜ ${imdbrate}
+
+🤵‍♂️ ${oce}Director:${oce} ➜ ${director}
+
+🕵️‍♂️ ${oce}Cast:${oce} ➜ ${cast}
 
 ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
 
-${oce}⚠️ ▫️දාන Files දවස් 14ක් ඇතුළත Download කරගන්න.${oce}
-
-  🥷🏻 *𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗠𝗼𝘃𝗶𝗲 ➢* https://wa.me/94740952096
-
-  ✨ *𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗠𝗼𝘃𝗶𝗲 ➢* https://wa.me/94772098172
-  ⚡ *𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗠𝗼𝘃𝗶𝗲 ➢* https://wa.me/94777135007
-
-⚠️▫️Phone එකෙන් Films, Series නැරඹීමට MX Player, VLC player භාවිතා කරන්න. 
-(Play Store එකෙන් Download කරගන්න)
+  💃 *ғᴏʟʟᴏᴡ ᴜs ➢* https://whatsapp.com/channel/0029VaaPfFK7Noa8nI8zGg27
 
 
 `
@@ -562,8 +553,8 @@ ${oce}⚠️ ▫️දාන Files දවස් 14ක් ඇතුළත Downloa
 const jid = jidx || from
 //await conn.sendMessage(jid,{image:{url: mov.mainDetails.imageUrl},caption: `${yt}\n\n` + config.FOOTER })   
 
-await conn.sendMessage(jid ,  { image : { url : mov.image } , text : yt + `> ᴜᴘʟᴏᴀᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ` })
-await conn.sendMessage(backup ,  { image : { url : movImg || mov.images[0] || mov.image || "" } , caption : yt + `> ᴜᴘʟᴏᴀᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ` })
+await conn.sendMessage(jid ,  { image : { url : mov.image } , text : yt + `${config.CAPTION}` })
+await conn.sendMessage(backup ,  { image : { url : movImg || mov.images[0] || mov.image || "" } , caption : yt + `${config.CAPTION}` })
 	
 if (jidx === from) { 
 await conn.sendMessage(from, { react: { text: '✔', key: mek.key } }) 
@@ -578,9 +569,8 @@ await conn.sendMessage(from, { react: { text: '✔', key: mek.key } })
 	
 } catch (e) {
 await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
-await conn.sendMessage(from, { text: msr.err }, { quoted : mek })
+reply(msr.err)
 console.log(e)
-await conn.sendMessage(creator, { text: `❌ *Error Accurated !!*\n\n${e}` + '' }, { quoted : mek })
 }
 })	
 
@@ -618,22 +608,22 @@ let yt = `
 📺 *ᴛɪᴛʟᴇ :* ${mov.title}
 ✨ *ꜰɪʀꜱᴛ ᴀɪʀ ᴅᴀᴛᴇ :* ${mov.first_air_date}
 🎐 *ʟᴀꜱᴛ ᴀɪʀ ᴅᴀᴛᴇ :* ${mov.last_air_date}
-🎭 *ᴄᴀᴛᴇɢᴏʀɪᴇꜱ :* ${mov.category}
-🌟 *ᴛᴍᴅʙ ʀᴀᴛɪɴ :* ${mov.tmdbRate}
+🎀 *ᴄᴀᴛᴇɢᴏʀɪᴇꜱ :* ${mov.category}
+⭐ *ᴛᴍᴅʙ ʀᴀᴛɪɴ :* ${mov.tmdbRate}
 🔮 *ᴛᴍᴅʙ ᴄᴏᴜɴᴛ :* ${mov.tmdbVoteCount}
 🎡 *ᴇᴘɪꜱᴏᴅᴇ ᴄᴏᴜɴᴛ :* ${mov.episode_count}
 
 ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
 
-  💍 *𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗠𝗼𝘃𝗶𝗲 ➢* https://wa.me/94740952096
+  💃 *ғᴏʟʟᴏᴡ ᴜs ➢* https://whatsapp.com/channel/0029VaaPfFK7Noa8nI8zGg27
 
 
 `
 const jid = jidx || from
 const movImg = mov.mainImage.replace("fit=", "fit")
 	
-await conn.sendMessage(jid ,  { image : { url : movImg || mov.image || '' } , caption : yt + `> ᴜᴘʟᴏᴀᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ`})
-await conn.sendMessage(backup ,  { image : { url : movImg || mov.image || '' } , caption : yt + `> ᴜᴘʟᴏᴀᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ`})
+await conn.sendMessage(jid ,  { image : { url : movImg || mov.image || '' } , caption : yt + `${config.CAPTION}`})
+await conn.sendMessage(backup ,  { image : { url : movImg || mov.image || '' } , caption : yt + `${config.CAPTION}`})
 
 if (jidx === from) { 
 await conn.sendMessage(from, { react: { text: '✔', key: mek.key } }) 
@@ -648,9 +638,8 @@ await conn.sendMessage(from, { react: { text: '✔', key: mek.key } })
 	
 } catch (e) {
 await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
-await conn.sendMessage(from, { text: msr.err }, { quoted : mek })
+reply(msr.err)
 console.log(e)
-await conn.sendMessage(creator, { text: `❌ *Error Accurated !!*\n\n${e}` + '' }, { quoted : mek })
 }
 })
 
@@ -696,12 +685,12 @@ const jid = jidx || from
 await conn.sendMessage(jid ,  { image : { url : mov.images[0] || "" } , caption : yt + `
 
 
-> ᴜᴘʟᴏᴀᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ`})
+${config.CAPTION}`})
 
 await conn.sendMessage(backup ,  { image : { url : mov.images[0] || "" } , caption : yt + `
 
 
-> ᴜᴘʟᴏᴀᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ`})
+${config.CAPTION}`})
 
 if (jidx === from) { 
 await conn.sendMessage(from, { react: { text: '✔', key: mek.key } }) 
@@ -716,9 +705,8 @@ await conn.sendMessage(from, { react: { text: '✔', key: mek.key } })
 	
 } catch (e) {
 await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
-await conn.sendMessage(from, { text: msr.err }, { quoted : mek })
+reply(msr.err)
 console.log(e)
-await conn.sendMessage(creator, { text: `❌ *Error Accurated !!*\n\n${e}` + '' }, { quoted : mek })
 }
 })
 
@@ -765,12 +753,12 @@ const jid = jidx || from
 await conn.sendMessage(jid ,  { image : { url : mov.image } , text : yt + `
 
 
-> ᴜᴘʟᴏᴀᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ`})
+${config.CAPTION}`})
 
 await conn.sendMessage(backup ,  { image : { url : mov.images[0] || "" } , text : yt + `
 
 
-> ᴜᴘʟᴏᴀᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ`})
+${config.CAPTION}`})
 
 if (jidx === from) { 
 await conn.sendMessage(from, { react: { text: '✔', key: mek.key } }) 
@@ -785,9 +773,8 @@ await conn.sendMessage(from, { react: { text: '✔', key: mek.key } })
 	
 } catch (e) {
 await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
-await conn.sendMessage(from, { text: msr.err }, { quoted : mek })
+reply(msr.err)
 console.log(e)
-await conn.sendMessage(creator, { text: `❌ *Error Accurated !!*\n\n${e}` + '' }, { quoted : mek })
 }
 })
 
@@ -830,10 +817,10 @@ if (!q) return reply("❗ *Please give me valid link*")
 							img_s =  text.split('🎈')[5]}
 
 
-if (!inp) return await conn.sendMessage(from, { text: "*Successful Processing ✅*"}, { quoted : mek })
+if (!inp) return await conn.sendMessage(from, { text: "*An error occurred 🧑‍🎨❌*"}, { quoted : mek })
 
-const anu = await fetchApi(`${apilink}/private/sit1/sc5?url=${inp}&apikey=${apikey}`)
-
+const anu = await cine.download(inp)
+const down = anu.result.gdrive || inp
 	
 var pf = ''			
 if (os.hostname().length == 36) pf = 'heroku'
@@ -853,12 +840,13 @@ size = size.replace('GB' ,'')
 if ( size > config.MAX_SIZE_GB || size == config.MAX_SIZE_GB) return await reply(`*The file is too large to download ⛔*\n*Use this link to download the movie. ❗*\n\n` +  down)	
 						       }}
 	
-	if(anu.result.gdrive) {
+	if(anu.result.gdrive !== "null") {
 	
 await inputMovie(true, nmf , new Date().getTime());
-	
+			
 const dlk = anu.result.gdrive
-const dl_link = dlk.replace("https://drive.usercontent.google.com/", "https://drive.google.com/")
+var dl_link = dlk
+if(dlk.includes("https://drive.usercontent.google.com/")) dl_link = dlk.replace("https://drive.usercontent.google.com/", "https://drive.google.com/");
 const up_mg = await conn.sendMessage(from, { text : 'Uploading Your Request Video..⬆' }, {quoted: mek})
 		
  let res = await fg.GDriveDl(dl_link)
@@ -871,17 +859,14 @@ const up_mg = await conn.sendMessage(from, { text : 'Uploading Your Request Vide
 
 const mvdoc = await conn.sendMessage( jid , { 
 		document : { url : res.downloadUrl } , 
-		fileName: `🎬DSXT🎬 ${f_name}.` + ext  , 
+		fileName: `${config.FILE_NAME} ${f_name}.` + ext  , 
 		mimetype: res.mimetype, 
 		caption: f_name + `\n${pk} ${quality} ${pk2}
 
-> ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ
-`
+
+` + config.CAPTION
 	})		
 	
-
-await conn.sendMessage(creator, { text: "Gdrive Upload ✅" }, { quoted: mek })
-await conn.forwardMessage(backup, mvdoc, false)
 await conn.sendMessage(from, { delete: up_mg.key })
 
 if (jidx === from) { 
@@ -893,10 +878,10 @@ await conn.sendMessage(from, { text : 'File Send Succesfull ✔' }, { quoted: me
 await conn.sendMessage(from, { react: { text: '✔', key: mek.key } })	
 await sleep(500 * 1) }
 	
-	} else if (anu.result.direct) {
+	} else if (anu.result.direct !== "null") {
 		
 await inputMovie(true, nmf , new Date().getTime());
-	
+		
 const mimeType = require('mime-types');	
 const up_mg = await conn.sendMessage(from, { text : 'Uploading Your Request Video..⬆' }, {quoted: mek})
 
@@ -911,16 +896,14 @@ const bufferdata = await getBuffer( anu.result.direct )
     
 	const mvdoc = await conn.sendMessage( jid , { 
 		document : bufferdata , 
-		fileName: `🎬DSXT🎬 ${nmf}.` + ext  , 
+		fileName: `${config.FILE_NAME} ${nmf}.` + ext  , 
 		mimetype: mime, 
 		caption: nmf + `\n${pk} ${quality} ${pk2}
 
->ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ
-`
+
+` + config.CAPTION
 	})
 
-await conn.sendMessage(creator, { text: "Direct Upload" }, { quoted: mek })
-await conn.forwardMessage(backup, mvdoc, false)
 await conn.sendMessage(from, { delete: up_mg.key })
 
 if (jidx === from) { 
@@ -933,11 +916,10 @@ await conn.sendMessage(from, { react: { text: '✔', key: mek.key } })
 await sleep(500 * 1)}
 
 		
-	} else if (anu.result.mega) {
+	} else if (anu.result.mega !== "null") {
 
 	await inputMovie(true, nmf , new Date().getTime());
         const up_mg = await conn.sendMessage(from, { text : 'Uploading Your Request Video..⬆' }, {quoted: mek})
-
         const file = File.fromURL(anu.result.mega)
         await file.loadAttributes()
 	const data = await file.downloadBuffer();
@@ -946,14 +928,12 @@ await sleep(500 * 1)}
             await conn.sendMessage(jid, { 
 		    document: data, 
 		    mimetype: "video/mp4", 
-		    fileName: `🎬DSXT🎬 ${nmf}.mp4`, 
+		    fileName: `${config.FILE_NAME} ${nmf}.mp4`, 
 		    caption: nmf + ` ${pk} ${quality} ${pk2}
       
-> ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ           
-`
+` + config.CAPTION
 	    }); 
 
-await conn.sendMessage(creator, { text: "Mega Upload" }, { quoted: mek })
 await conn.sendMessage(from, { delete: up_mg.key })
 	
 if (jidx === from) { 	
@@ -973,12 +953,11 @@ return reply(msr.not_fo)
 
 await inputMovie(false, nmf , new Date().getTime() );
 } catch (e) {
-const msr = (await fetchJson('https://raw.githubusercontent.com/SadeepaChamudith2006/FROZEN-HARD/refs/heads/main/MESSAGES/mreply.json')).replyMsg
+const msr = (await fetchJson('https://raw.githubusercontent.com/DarkYasiyaofc/FROZEN-HARD/main/MESSAGES/mreply.json')).replyMsg
 await resetMovie();	
 await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
-await conn.sendMessage(from, { text: msr.err }, { quoted : mek })
+reply(msr.err)
 console.log(e)
-await conn.sendMessage(creator, { text: `❌ *Error Accurated !!*\n\n${e}` + '' }, { quoted : mek })
 }
 })
 
