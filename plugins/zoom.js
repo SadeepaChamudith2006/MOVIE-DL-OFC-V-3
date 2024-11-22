@@ -4,7 +4,7 @@ const { cmd, commands } = require('../command')
 const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, fetchJson, fetchApi} = require('../lib/functions')
 const oce = "`"
 const oce3 = "*"
-const upname = '🔠 ᴅᴀʀᴋʏᴀꜱɪʏᴀxᴛᴇᴀᴍ 🔠 '
+
 const { storenumrepdata } = require('../lib/numrepstore')
 function formatNumber(num) {
     return String(num).padStart(2, '0');
@@ -31,7 +31,7 @@ let mov = movs.result.data
 if (mov.length < 1) return await reply(msr.not_fo)
 
 
-let cot = `🔠 *𝖬𝖮𝖵𝖨𝖤-𝖷 𝖲𝖴𝖡𝖳𝖨𝖳𝖫𝖤 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 🔠
+let cot = `🔠 *𝖲𝖴𝖡𝖳𝖨𝖳𝖫𝖤 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 🔠
 
 
 📲 ${oce}Input:${oce} *${q}*
@@ -56,9 +56,8 @@ let cot = `🔠 *𝖬𝖮𝖵𝖨𝖤-𝖷 𝖲𝖴𝖡𝖳𝖨𝖳𝖫𝖤 𝖣
 await storenumrepdata(jsonmsg) 
 } catch (e) {
 await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
-await conn.sendMessage(from, { text: msr.err }, { quoted : mek })
+reply(msr.err)
 console.log(e)
-await conn.sendMessage(creator, { text: `❌ *Error Accurated !!*\n\n${e}` + '' }, { quoted : mek })
 }
 })
 //---------------------------------------------------------------------------------------------------------------
@@ -71,10 +70,10 @@ cmd({
 async(conn, mek, m,{from, prefix, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, apilink, apikey, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 	
-                                var url = ''
+        var url = ''
 				var img = ''
 				var inp = ''
-	                        var nmf = ''
+	      var nmf = ''
 				var text = q
 				if (q.includes('🎈')) img = text.split('🎈')[1]
 				if (text.includes('🎈')) { url = text.split('🎈')[0]
@@ -84,7 +83,7 @@ try{
 
 
 
-              let cot = `🔠 *𝖬𝖮𝖵𝖨𝖤-𝖷 𝖲𝖴𝖡𝖳𝖨𝖳𝖫𝖤 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 🔠
+              let cot = `🔠 *𝖲𝖴𝖡𝖳𝖨𝖳𝖫𝖤 𝖣𝖮𝖶𝖭𝖫𝖮𝖠𝖣 𝖲𝖸𝖲𝖳𝖤𝖬* 🔠
 
 
    📽️ ${oce3}Title:${oce3} ${nmf}
@@ -117,9 +116,8 @@ const mass = await conn.sendMessage(from, { text: `${cot}\n\n${config.FOOTER}` }
 await storenumrepdata(jsonmsg)    
 } catch (e) {
 await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
-await conn.sendMessage(from, { text: msr.err }, { quoted : mek })
+reply(msr.err)
 console.log(e)
-await conn.sendMessage(creator, { text: `❌ *Error Accurated !!*\n\n${e}` + '' }, { quoted : mek })
 }
 })	
 
@@ -133,10 +131,9 @@ cmd({
     dontAddCommandList: true,
     filename: __filename
 },
-async(conn, mek, m,{from, prefix, l, quoted, body, isCmd, command, args, q, isGroup, apilink, apikey, sender, senderNumber, botNumber2, botNumber, pushname, isMe, form, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+async(conn, mek, m,{from, prefix, l, quoted, body, isCmd, msr, command, args, q, isGroup, apilink, apikey, sender, senderNumber, botNumber2, botNumber, pushname, isMe, form, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
   
-const msr = (await fetchJson('https://raw.githubusercontent.com/SadeepaChamudith2006/FROZEN-HARD/refs/heads/main/MESSAGES/mreply.json')).replyMsg	
 if (!q) return reply("❗ *Please give zoom url*")
     
   
@@ -175,7 +172,7 @@ const up_mg = await conn.sendMessage(from, { text : 'Uploading Subtitle File...�
   
 	await conn.sendMessage(jid , { 
 		document : await getBuffer(mov.result.data.dl_link) , 
-		fileName: `${upname}| ${mov.result.data.title}.zip`, 
+		fileName: `${mov.result.data.title}.zip`, 
 		mimetype: "application/zip", 
 		caption:  `${mov.result.data.title}
 
@@ -187,8 +184,7 @@ await conn.sendMessage(from, { react: { text: '✔', key: mek.key } })
 
 } catch (e) {
 await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
-await conn.sendMessage(from, { text: msr.err }, { quoted : mek })
+reply(msr.err)
 console.log(e)
-await conn.sendMessage(creator, { text: `❌ *Error Accurated !!*\n\n${e}` + '' }, { quoted : mek })
 }
 })
