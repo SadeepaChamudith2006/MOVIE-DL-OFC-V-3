@@ -9,7 +9,7 @@ function convertToBool(text, fault = 'true') {
 
 
 module.exports = {
-SESSION_ID: process.env.SESSION_ID === undefined ? 'YASIYA-MD~5e9HkYQa#S3LyCz6xeumxIjmmNMnmhEPrSONhvRuRtfMtYvsAf28': process.env.SESSION_ID,
+SESSION_ID: process.env.SESSION_ID === undefined ? '': process.env.SESSION_ID,
 GITHUB_USERNAME: process.env.GITHUB_USERNAME === undefined ? 'SadeepaChamudith2006': process.env.GITHUB_USERNAME,
 GITHUB_AUTH_TOKEN: process.env.GITHUB_AUTH_TOKEN === undefined ? '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': process.env.GITHUB_AUTH_TOKEN,
 BOT_NUMBER: process.env.BOT_NUMBER === undefined ? '94740952096': process.env.BOT_NUMBER,
