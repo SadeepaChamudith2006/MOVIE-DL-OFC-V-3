@@ -41,8 +41,8 @@ let cot = `🔠 *𝖲𝖴𝖡𝖳𝖨𝖳𝖫𝖤 𝖣𝖮𝖶𝖭𝖫𝖮𝖠�
   let numrep = []              
 
                   mov.forEach(( i, index ) => { 
-                  cot += `*1.${formatNumber( index + 1)} ||* ${i.title.replace(" Sinhala Subtitle (සිංහල උපසිරැසි)", "")}\n`			
-                  numrep.push( `1.${( index + 1 )} ${prefix}zoomjid ${i.url}🎈${i.image}🎈${i.subtitle_author}🎈${i.title}` )
+                  cot += `*${formatNumber( index + 1)} ||* ${i.title.replace(" Sinhala Subtitle (සිංහල උපසිරැසි)", "")}\n`			
+                  numrep.push( `${prefix}zoomjidz ${i.url}🎈${i.image}🎈${i.subtitle_author}🎈${i.title}` )
                   })
   
  const mass = await conn.sendMessage(from, { text: `${cot}\n\n${config.FOOTER}` }, { quoted: mek });
@@ -50,7 +50,7 @@ let cot = `🔠 *𝖲𝖴𝖡𝖳𝖨𝖳𝖫𝖤 𝖣𝖮𝖶𝖭𝖫𝖮𝖠�
           const jsonmsg = {
             key : mass.key,
             numrep,
-            method : 'decimal'
+            method : 'nondecimal'
            }
 
 await storenumrepdata(jsonmsg) 
@@ -63,7 +63,7 @@ console.log(e)
 //---------------------------------------------------------------------------------------------------------------
 
 cmd({
-    pattern: "zoomjid",
+    pattern: "zoomjidz",
     react: "✈",
     filename: __filename
 },
@@ -105,7 +105,7 @@ for (let j = 0 ; j < config.JIDS.length; j++) {
 
 
 
-const mass = await conn.sendMessage(from, { text: `${cot}\n\n${config.FOOTER}` }, { quoted: mek });
+const mass = await conn.sendMessage(from, { image: { url: config.LOGO },caption: `${cot}\n\n${config.FOOTER}` }, { quoted: mek });
 	
           const jsonmsg = {
             key : mass.key,
