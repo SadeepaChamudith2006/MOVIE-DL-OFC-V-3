@@ -364,7 +364,7 @@ numrep.push(`${prefix}sinhimages ${q}`)
 				
                   cot += `*${formatNumber( index + 4)} ||* ${movie.quality} *( ${movie.size} )*\n[ ${dl_type} ]\n`
 				
-                  numrep.push(`${prefix}sinedirectdl2 ${movie.link}🎈${mov.title}🎈${movie.quality}🎈${movie.size}🎈${jidx}` )
+                  numrep.push(`${prefix}sinedirectdl ${movie.link}🎈${mov.title}🎈${movie.quality}🎈${movie.size}🎈${jidx}` )
                   })
                  
 
@@ -419,16 +419,16 @@ var cast = ''
 	
   
 let yt = `
-🍃Ｔɪᴛʟᴇ _*${name}*_
+🍃Ｔɪᴛʟᴇ _*${mov.title}*_
 
 
-🧿 *𝗥𝗲𝗹𝗲𝗮𝘀𝗲 𝗗𝗮𝘁𝗲:* ➜ ${date}
+🧿 *𝗥𝗲𝗹𝗲𝗮𝘀𝗲 𝗗𝗮𝘁𝗲:* ➜ ${mov.date}
 
-🌍 *𝗖𝗼𝘂𝗻𝘁𝗿𝘆:* ➜ ${country}
+🌍 *𝗖𝗼𝘂𝗻𝘁𝗿𝘆:* ➜ ${mov.country}
 
-⏰️ *𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:* ➜ ${runtime}
+⏰️ *𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:* ➜ ${mov.runtime}
 
-🎭 *𝗖𝗮𝘁𝗲𝗴𝗼𝗿𝗶𝗲𝘀:* ➜ ${cat}
+🎭 *𝗖𝗮𝘁𝗲𝗴𝗼𝗿𝗶𝗲𝘀:* ➜ ${mov.category}
 
 ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
 
@@ -452,10 +452,6 @@ await conn.sendMessage(jid ,  { image : { url : mov.images[0] || mov.image || co
 
 >ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ` })
 
-await conn.sendMessage(backup ,  { image : { url : mov.images[0] || mov.image || config.LOGO } , caption : yt + `
-
-
->ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ` })	
 
 if (jidx === from) { 
 await conn.sendMessage(from, { react: { text: '✔', key: mek.key } }) 
@@ -505,16 +501,16 @@ var cast = ''
 	
   
 let yt = `
-🍃Ｔɪᴛʟᴇ _*${name}*_
+🍃Ｔɪᴛʟᴇ _*${mov.title}*_
 
 
-🧿 *𝗥𝗲𝗹𝗲𝗮𝘀𝗲 𝗗𝗮𝘁𝗲:* ➜ ${date}
+🧿 *𝗥𝗲𝗹𝗲𝗮𝘀𝗲 𝗗𝗮𝘁𝗲:* ➜ ${mov.date}
 
-🌍 *𝗖𝗼𝘂𝗻𝘁𝗿𝘆:* ➜ ${country}
+🌍 *𝗖𝗼𝘂𝗻𝘁𝗿𝘆:* ➜ ${mov.country}
 
-⏰️ *𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:* ➜ ${runtime}
+⏰️ *𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻:* ➜ ${mov.runtime}
 
-🎭 *𝗖𝗮𝘁𝗲𝗴𝗼𝗿𝗶𝗲𝘀:* ➜ ${cat}
+🎭 *𝗖𝗮𝘁𝗲𝗴𝗼𝗿𝗶𝗲𝘀:* ➜ ${mov.category}
 
 ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
 
@@ -534,11 +530,6 @@ const jid = jidx || from
 //await conn.sendMessage(jid,{image:{url: mov.mainDetails.imageUrl},caption: `${yt}\n\n` + config.FOOTER })   
 
 await conn.sendMessage(jid ,  { image : { url : mov.image } , text : yt + `
-
-
->ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ` })
-
-await conn.sendMessage(backup ,  { image : { url : mov.image } , text : yt + `
 
 
 >ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ` })	
@@ -609,10 +600,6 @@ await conn.sendMessage(jid ,  { image : { url : mov.image } , text : yt + `
 
 >ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ`})
 
-await conn.sendMessage(backup ,  { image : { url : mov.image } , text : yt + `
-
-
->ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ`})
 
 if (jidx === from) { 
 await conn.sendMessage(from, { react: { text: '✔', key: mek.key } }) 
@@ -676,11 +663,7 @@ await conn.sendMessage(jid ,  { image : { url : mov.images[0] || '' } , caption 
 
 
 >ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ`})
-
-await conn.sendMessage(backup ,  { image : { url : mov.images[0] || '' } , caption : yt + `
-
-
->ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ`})	
+	
 
 if (jidx === from) { 
 await conn.sendMessage(from, { react: { text: '✔', key: mek.key } }) 
@@ -745,10 +728,6 @@ await conn.sendMessage(jid ,  { image : { url : mov.image } , text : yt + `
 
 >ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ`})
 
-await conn.sendMessage(backup ,  { image : { url : mov.image } , text : yt + `
-
-
->ᴄᴏʀᴅᴇᴅ ʙʏ ꜱᴀᴅᴇᴇᴘᴀ ᴄʜᴀᴍᴜᴅɪᴛʜ`})
 
 if (jidx === from) { 
 await conn.sendMessage(from, { react: { text: '✔', key: mek.key } }) 
@@ -865,16 +844,16 @@ await conn.sendMessage(from, { react: { text: '✔', key: mek.key } })
 await sleep(500 * 1) 
 }
 	
-} else if (inp.includes("ddl.sinhalasub.net" || "ssl.sinhalasub01.workers.dev")) {
+} else if(inp.includes("https://pixeldrain.com")){
 
 
-// DIRECT
+// PIXELDRAIN
 if(inp.includes('https://pixeldrain.com/u/'))   inp = inp.replace('/u/' , '/api/file/')
 	
 const up_mg = await conn.sendMessage(from, { text : 'Uploading Your Request Video..⬆' }, {quoted: mek})
 		     
 const mvdoc = await conn.sendMessage( jid , { 
-		document : { url: await getBuffer(inp) }, 
+		document : { url: inp }, 
 		fileName: `🎬DSXT🎬 ${nmf}.mp4`,
 		mimetype: "video/mp4", 
 		caption:  nmf + ` ${pk} ${quality} ${pk2}
@@ -883,7 +862,6 @@ const mvdoc = await conn.sendMessage( jid , {
 	})
 	
 await inputMovie(false, nmf , new Date().getTime() );
-await conn.forwardMessage(backup, mvdoc, false)
 await conn.sendMessage(from, { delete: up_mg.key })
 	
 if (jidx === from) { 
@@ -895,215 +873,32 @@ await conn.sendMessage(from, { text : 'File Send Succesfull ✔' }, { quoted: me
 await conn.sendMessage(from, { react: { text: '✔', key: mek.key } })	
 await sleep(500 * 1) 
 }
-
-	
-} else if(inp.includes('https://pixeldrain.com/u/'))  {
-inp = inp.replace('/u/' , '/api/file/')
-	
-const up_mg = await conn.sendMessage(from, { text : 'Uploading Your Request Video..⬆' }, {quoted: mek})
-		     
-const mvdoc = await conn.sendMessage( jid , { 
-		document : { url: inp + "?download" }, 
-		fileName: `🎬DSXT🎬 ${nmf}.mp4`,
-		mimetype: "video/mp4", 
-		caption:  nmf + ` ${pk} ${quality} ${pk2}
-
-` + config.CAPTION
-	})
-	
-await inputMovie(false, nmf , new Date().getTime() );
-await conn.forwardMessage(backup, mvdoc, false)
-await conn.sendMessage(from, { delete: up_mg.key })
-	
-if (jidx === from) { 
-await conn.sendMessage(from, { react: { text: '✔', key: mek.key } }) 
-await sleep(500 * 1) 
-
-} else {
-await conn.sendMessage(from, { text : 'File Send Succesfull ✔' }, { quoted: mek }) 
-await conn.sendMessage(from, { react: { text: '✔', key: mek.key } })	
-await sleep(500 * 1) 
-}
-
 } else {
 
-await conn.sendMessage(from, { text: msr.not_fo })
-await inputMovie(false, nmf , new Date().getTime());
-}
-		
-} catch (e) {
-await resetMovie();	 
-await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
-await conn.sendMessage(from, { text: msr.err }, { quoted : mek })
-console.log(e)
-await conn.sendMessage(creator, { text: `❌ *Error Accurated !!*\n\n${e}` + '' }, { quoted : mek })
-}
-})
 
-
-
-//---------------------------------------------------------------------------------------------------------------
-//---------------------------------------------------------------------------------------------------------------
-cmd({
-    pattern: "sinedirectdl2",
-    react: "⬆",
-    dontAddCommandList: true,
-    filename: __filename
-},
-async(conn, mek, m,{from, prefix, l, quoted, body, isCmd, command, args, q, backup, isGroup, apilink, apikey, sender, senderNumber, botNumber2, botNumber, pushname, isMe, form, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
-try{
-
-				const isProcess = await getMovie();
-				if(isProcess.is_download){
-				var pmt = isProcess.time
-				var pt = ( new Date().getTime() - pmt ) / 36000	
-				if (pt < 10) return reply(`_වෙනත් චිත්‍රපටයක් බාගත වෙමින් පවතින අතර එය බාගත වීමෙන් පසු නැවත උත්සහ කරන්න.❗_\n\n_බාගත වෙමින් පවතින චිත්‍රපටය ⬆️_\n\n*${isProcess.name}*`)
-				}
-	
-	
-if(!q) return reply('"❗ *Please give me valid link*')	
-
-                                var typ = ''
-				var inp = ''
-	                        var jidx = ''
-				var nmf = ''
-				var size = ''
-			        var quality = ''
-				var text = q
-				if (q.includes('🎈')) nmf = text.split('🎈')[1]
-				if (text.includes('🎈')) { inp = text.split('🎈')[0]
-                                                        quality =  text.split('🎈')[2]
-							size =  text.split('🎈')[3]
-							jidx =  text.split('🎈')[4]
-							}
-	
-							 
-if (!inp) return reply("*Successful Processing ✅*")
-
-var pf = ''			
-if (os.hostname().length == 36) pf = 'heroku'
-if(pf == 'heroku')  {			
-				
-if(size.includes('GB')) { return await reply(`*The file is too large to download ⛔*\n*Use this link to download the movie. ❗*\n\n` + inp)	
-	
-} else if(size.includes('MB')) {
-					
-size = size.replace('MB' ,'')
-if ( size > 300 || size == 300) return await reply(`*The file is too large to download ⛔*\n*Use this link to download the movie. ❗*\n\n` + inp)	
-						       }}
-else{
-	
-if(size.includes('GB')) {
-size = size.replace('GB' ,'')
-if ( size > config.MAX_SIZE_GB || size == config.MAX_SIZE_GB) return await reply(`*The file is too large to download ⛔*\n*Use this link to download the movie. ❗*\n\n` + inp)	
-						       }}
-
-	
-const jid = jidx || from
-
+    // DIRECT   
+    const up_mg = await conn.sendMessage(from, { text : 'Uploading Your Request Video..⬆' }, {quoted: mek})              
+    const mvdoc = await conn.sendMessage( jid , { 
+            document : { url: await getBuffer(inp) }, 
+            fileName: `🎬DSXT🎬 ${nmf}.mp4`,
+            mimetype: "video/mp4", 
+            caption:  nmf + ` ${pk} ${quality} ${pk2}
     
-
-//MEGA.NZ
-if(inp.includes("mega.nz")) {
-	
-const up_mg = await conn.sendMessage(from, { text : 'Uploading Your Request Video..⬆' }, {quoted: mek})
-	
-	
-        const file = File.fromURL(inp)
-        await file.loadAttributes()
-      //  if (file.size >= config.MAX_SIZE * 1024 * 1024) return reply(`File size exeeded...\nMaximum Upload Size Is ${config.MAX_SIZ} MB`)
-	const data = await file.downloadBuffer();
-	
-
-	
-            await conn.sendMessage(jid, { 
-		    document: data, 
-		    mimetype: "video/mp4", 
-		    fileName: `🎬DSXT🎬 ${nmf}.mp4`, 
-		    caption: nmf + ` ${pk} ${quality} ${pk2}
-      
-` + config.CAPTION
-	    }); 
-	
-await conn.sendMessage(from, { delete: up_mg.key })
-	
-if (jidx === from) { 	
-await conn.sendMessage(from, { react: { text: '✔', key: mek.key } }) 
-await sleep(500 * 1) 
-}	
-
-else {
-await conn.sendMessage(from, { text : 'File Send Succesfull ✔' }, { quoted: mek }) 
-await conn.sendMessage(from, { react: { text: '✔', key: mek.key } })	
-await sleep(500 * 1) 
-}
-	
-} else if (inp.includes("ddl.sinhalasub.net" || "ssl.sinhalasub01.workers.dev")) {
-
-
-// DIRECT
-if(inp.includes('https://pixeldrain.com/u/'))   inp = inp.replace('/u/' , '/api/file/')
-	
-const up_mg = await conn.sendMessage(from, { text : 'Uploading Your Request Video..⬆' }, {quoted: mek})
-		     
-const mvdoc = await conn.sendMessage( jid , { 
-		document : { url: await getBuffer(inp) }, 
-		fileName: `🎬DSXT🎬 ${nmf}.mp4`,
-		mimetype: "video/mp4", 
-		caption:  nmf + ` ${pk} ${quality} ${pk2}
-
-` + config.CAPTION
-	})
-	
-await inputMovie(false, nmf , new Date().getTime() );
-await conn.forwardMessage(backup, mvdoc, false)
-await conn.sendMessage(from, { delete: up_mg.key })
-	
-if (jidx === from) { 
-await conn.sendMessage(from, { react: { text: '✔', key: mek.key } }) 
-await sleep(500 * 1) 
-
-
-} else {
-await conn.sendMessage(from, { text : 'File Send Succesfull ✔' }, { quoted: mek }) 
-await conn.sendMessage(from, { react: { text: '✔', key: mek.key } })	
-await sleep(500 * 1) 
-}
-
-	
-} else if(inp.includes('https://pixeldrain.com/u/'))  {
-inp = inp.replace('/u/' , '/api/file/')
-	
-const up_mg = await conn.sendMessage(from, { text : 'Uploading Your Request Video..⬆' }, {quoted: mek})
-		     
-const mvdoc = await conn.sendMessage( jid , { 
-		document : { url: inp + "?download" }, 
-		fileName: `🎬DSXT🎬 ${nmf}.mp4`,
-		mimetype: "video/mp4", 
-		caption:  nmf + ` ${pk} ${quality} ${pk2}
-
-` + config.CAPTION
-	})
-	
-await inputMovie(false, nmf , new Date().getTime() );
-await conn.forwardMessage(backup, mvdoc, false)
-await conn.sendMessage(from, { delete: up_mg.key })
-	
-if (jidx === from) { 
-await conn.sendMessage(from, { react: { text: '✔', key: mek.key } }) 
-await sleep(500 * 1) 
-
-
-} else {
-await conn.sendMessage(from, { text : 'File Send Succesfull ✔' }, { quoted: mek }) 
-await conn.sendMessage(from, { react: { text: '✔', key: mek.key } })	
-await sleep(500 * 1) 
-}
-
-} else {
-
-await conn.sendMessage(from, { text: msr.not_fo })
-}
+    ` + config.CAPTION
+        })
+        
+    await inputMovie(false, nmf , new Date().getTime() );
+    await conn.sendMessage(from, { delete: up_mg.key })
+        
+    if (jidx === from) { 
+    await conn.sendMessage(from, { react: { text: '✔', key: mek.key } }) 
+    await sleep(500 * 1) 
+    
+    } else {
+    await conn.sendMessage(from, { text : 'File Send Succesfull ✔' }, { quoted: mek }) 
+    await conn.sendMessage(from, { react: { text: '✔', key: mek.key } })	
+    await sleep(500 * 1) 
+    }}
 		
 } catch (e) {
 await resetMovie();	 
