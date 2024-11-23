@@ -98,6 +98,7 @@ const {
   if (!fs.existsSync(__dirname + '/session/creds.json')) {
   if(!config.SESSION_ID) return console.log('Please add your session to SESSION_ID env !!.')
   const sessdata = config.SESSION_ID
+  if(sessdata.includes("YASIYA-MD~")) sessdata = sessdata.split("YASIYA-MD~")[1]
   const filer = File.fromURL(`https://mega.nz/file/${sessdata}`)
   filer.download((err, data) => {
   if(err) throw err
