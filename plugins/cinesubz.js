@@ -465,7 +465,6 @@ const jid = jidx || from
 const movImg = mov.mainImage.replace("fit=", "fit")
 	
 await conn.sendMessage(jid ,  { image : { url : movImg || mov.images[0] || mov.image || "" } , caption : yt + `${config.CAPTION}` })
-await conn.sendMessage(backup ,  { image : { url : movImg || mov.images[0] || mov.image || "" } , caption : yt + `${config.CAPTION}` })
 
 if (jidx === from) { 
 await conn.sendMessage(from, { react: { text: '✔', key: mek.key } }) 
@@ -554,7 +553,6 @@ const jid = jidx || from
 //await conn.sendMessage(jid,{image:{url: mov.mainDetails.imageUrl},caption: `${yt}\n\n` + config.FOOTER })   
 
 await conn.sendMessage(jid ,  { image : { url : mov.image } , text : yt + `${config.CAPTION}` })
-await conn.sendMessage(backup ,  { image : { url : movImg || mov.images[0] || mov.image || "" } , caption : yt + `${config.CAPTION}` })
 	
 if (jidx === from) { 
 await conn.sendMessage(from, { react: { text: '✔', key: mek.key } }) 
@@ -623,7 +621,6 @@ const jid = jidx || from
 const movImg = mov.mainImage.replace("fit=", "fit")
 	
 await conn.sendMessage(jid ,  { image : { url : movImg || mov.image || '' } , caption : yt + `${config.CAPTION}`})
-await conn.sendMessage(backup ,  { image : { url : movImg || mov.image || '' } , caption : yt + `${config.CAPTION}`})
 
 if (jidx === from) { 
 await conn.sendMessage(from, { react: { text: '✔', key: mek.key } }) 
@@ -687,10 +684,6 @@ await conn.sendMessage(jid ,  { image : { url : mov.images[0] || "" } , caption 
 
 ${config.CAPTION}`})
 
-await conn.sendMessage(backup ,  { image : { url : mov.images[0] || "" } , caption : yt + `
-
-
-${config.CAPTION}`})
 
 if (jidx === from) { 
 await conn.sendMessage(from, { react: { text: '✔', key: mek.key } }) 
@@ -751,11 +744,6 @@ let yt = `
 const jid = jidx || from
 
 await conn.sendMessage(jid ,  { image : { url : mov.image } , text : yt + `
-
-
-${config.CAPTION}`})
-
-await conn.sendMessage(backup ,  { image : { url : mov.images[0] || "" } , text : yt + `
 
 
 ${config.CAPTION}`})
